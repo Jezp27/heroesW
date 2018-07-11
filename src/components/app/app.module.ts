@@ -5,11 +5,9 @@ import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HeroService} from './heroes/hero.service';
 import { StoreModule, MetaReducer } from '@ngrx/store';
-import { HeroesModule } from './heroes/heroes.module';
 import { storeFreeze } from 'ngrx-store-freeze';
-import { HeroesComponent } from './heroes/heroes.component';
+import { EffectsModule } from '@ngrx/effects';
 
 
 // this would be done dynamically with webpack for builds
@@ -18,19 +16,10 @@ const environment = {
   production: false,
 };
 
+
 export const routes: Routes =[
-  {
-    path:'heroes',
-    component: HeroesComponent,
-  },
-  {
-    path: '',
-    redirectTo: '/heroes',
-    pathMatch: 'full'
-  },
-  {
-    path: '**', component: AppComponent
-  }
+  { path: '', redirectTo: '/heroes', pathMatch: 'full'},
+  { path:'heroes', loadChildren: './heroes/heroes.module#HeroesModule?sync=true'},
 ];
 
 export const metaReducers: MetaReducer<any>[] = !environment.production
@@ -43,11 +32,11 @@ export const metaReducers: MetaReducer<any>[] = !environment.production
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(routes),
     HttpModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
-    HeroesModule,
-    //StoreModule.forRoot({}, {metaReducers})
+    StoreModule.forRoot({}, {metaReducers}),
+    EffectsModule.forRoot([])
   ],
   bootstrap: [AppComponent]
 })

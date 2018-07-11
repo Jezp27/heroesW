@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Hero } from '../heroes/models/hero.model';
+import { Hero } from '../../models/hero.model';
 import { catchError, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/abstract_emitter';
@@ -13,15 +13,7 @@ export class HeroService{
   getAllHeroes(){
     const endPoint = 'https://udem.herokuapp.com/heroes';
     return this.http.get<Hero[]>(endPoint).pipe(
-      catchError(this.handleError('getAllHeroes', []))
+      catchError((error: any) => Observable.throw(error.json()))
     );
   }
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      return of(result as T);
-    };
-  }
-
-
 }

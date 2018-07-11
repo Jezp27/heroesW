@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroService } from './hero.service';
+import { HeroService } from './store/services/hero.service';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+import * as localStore from '../heroes/store';
+import { Hero } from '../heroes/models/hero.model';
 
 @Component({
     selector: 'app-heroes',
@@ -7,11 +11,15 @@ import { HeroService } from './hero.service';
 })
 
 export class HeroesComponent implements OnInit  { 
-
-    constructor(private HeroService: HeroService){}
+    heroes: Hero[];
+     
+    constructor(private store: Store<localStore.HeroState>){}
 
     ngOnInit(){
-      this.HeroService.getAllHeroes();
-      
+        this.store.select(localStore.getAllHeroes).subscribe(state =>{
+            this.heroes=state;
+      });
+      this.store.dispatch(new localStore.LoadHeroes());
     }
 }
+

@@ -1,13 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { HeroesComponent } from './heroes.component';
-import { HttpClientModule } from '@angular/common/http';
-import { HeroService} from './hero.service';
-import { StoreModule } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
-import { reducers } from './store';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
+
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
+import { HeroesComponent } from './heroes.component';
+import { HeroService} from './store/services/hero.service';
+import { reducers, effects } from './store';
+
+export const routes: Routes = [{ path: '', component: HeroesComponent }];
 
 @NgModule({
   declarations: [
@@ -15,14 +20,14 @@ import { reducers } from './store';
   ],
   imports: [
     CommonModule,
-    BrowserModule,
+    RouterModule.forChild(routes),
     FormsModule,
     HttpModule,
     HttpClientModule,
-  
-    //StoreModule.forFeature('Heroes', reducers)
+    StoreModule.forFeature('heroes', reducers),
+    EffectsModule.forFeature(effects)
   ],
-  exports: [ HeroesComponent ],
+  exports: [RouterModule ],
   providers: [HeroService],
 })
 export class HeroesModule { }
