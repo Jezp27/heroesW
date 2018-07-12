@@ -33,9 +33,9 @@ export const metaReducers: MetaReducer<any>[] = !environment.production
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes),
     HttpModule,
     HttpClientModule,
+    RouterModule.forRoot(routes),   
     FlexLayoutModule,
     StoreModule.forRoot({}, {metaReducers}),
     EffectsModule.forRoot([])

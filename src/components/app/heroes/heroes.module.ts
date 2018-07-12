@@ -20,10 +20,10 @@ export const routes: Routes = [{ path: '', component: HeroesComponent }];
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
     FormsModule,
     HttpModule,
     HttpClientModule,
+    RouterModule.forChild(routes),
     StoreModule.forFeature('heroes', reducers),
     EffectsModule.forFeature(effects)
   ],

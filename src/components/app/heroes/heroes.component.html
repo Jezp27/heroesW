@@ -1,8 +1,43 @@
-<h1>Funciona!!</h1>
+
 <!--<p *ngIf="heroes.loading">Loading...</p>-->
-<ul class= 'flex-container'>
+<!--
+<div class= 'container'>
+    <div class="container__row">
+            <div class="container__col" *ngFor= "let hero of heroes">
+                    <div class="container__rowI" ><img src= {{hero._picture}}></div>
+                    <div class="container__rowI" >
+
+                        {{hero._nickname}}
+                        {{hero._name}}
+                        Estatura: {{hero._height}}
+                    </div>
+            </div>
+    </div>
+</div>
 <li class= 'flex-item col-4' *ngFor= "let hero of heroes">
     <img src= {{hero._picture}}>
 </li>
-</ul>
+</ul>-->
 
+
+<div class="flex-container">
+
+
+    <div class="flex-item row" *ngFor="let hero of heroes">
+
+        <div class="flex-item__other">
+            <div class="hero_position">
+                <img src="{{hero._picture}}">
+                <div class="float">1st</div>
+            </div>
+        </div>
+        <div class="flex-item__other">
+            <h2>{{hero._nickname}}</h2>
+            <br>
+            <h4>{{hero._name}}</h4>
+            <br>
+            <h4>Estatura: {{hero._height}}</h4>
+
+        </div>
+    </div>
+</div>
