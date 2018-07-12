@@ -18,9 +18,11 @@
   "author": "Jenny Zapata",
   "license": "ISC",
   "dependencies": {
+    "@angular/cdk": "^5.2.1",
     "@angular/common": "^5.2.11",
     "@angular/compiler": "^5.2.11",
     "@angular/core": "^5.2.11",
+    "@angular/flex-layout": "^2.0.0-beta.10-4905443",
     "@angular/forms": "^5.2.11",
     "@angular/http": "^5.2.11",
     "@angular/platform-browser": "^5.2.11",
@@ -34,6 +36,7 @@
     "reflect-metadata": "^0.1.12",
     "rxjs": "^5.5.0",
     "save-dev": "^2.0.0",
+    "to-string-loader": "^1.1.5",
     "webpack-cli": "^3.0.8",
     "zone.js": "^0.8.26"
   },

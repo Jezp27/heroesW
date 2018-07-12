@@ -1,7 +1,8 @@
 <h1>Funciona!!</h1>
 <!--<p *ngIf="heroes.loading">Loading...</p>-->
-
-<li *ngFor= "let hero of heroes">
-  {{hero._name}}
+<ul class= 'flex-container'>
+<li class= 'flex-item col-4' *ngFor= "let hero of heroes">
+    <img src= {{hero._picture}}>
 </li>
+</ul>
 

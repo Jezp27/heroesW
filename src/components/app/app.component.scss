@@ -1,0 +1,107 @@
+
+
+
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+  background: {
+      image: url($imgpath);
+      position: $position;
+      repeat: $repeat;
+  }
+}
+.training{
+  @include background('../../assets/img/HeroesBackground.jpg');
+}
+
+
+/*
+.flexDemoContainer { 
+  background: url(../../assets/img/HeroesBackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*/
+$body-bg: transparent; 
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Container {
+  /* The image used */
+  background-image: url(../../assets/img/HeroesBackground.jpg) ;
+  position: 0 0;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+
+
+/*
+$grid__bp--md: 768;
+$grid__cols: 12;
+
+.container {
+  max-width: $grid__bp--md * 1px;
+  margin: 0 auto;
+  &--fluid {
+    margin: 0;
+    max-width: 100%;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+  }
+  @for $i from 1 through $grid__cols {
+    &__col-sm-#{$i} {
+      flex-basis: (100 / ($grid__cols / $i) ) * 1%;
+    }
+  }
+  @media screen and (min-width: $grid__bp--md * 1px) {
+    @for $i from 1 through $grid__cols {
+      &__col-md-#{$i} {
+        flex-basis: (100 / ($grid__cols / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+//Styling of grid for demostration purposes
+.container {
+  background-color: #88d8b0;
+  padding: 10px;
+  box-sizing: border-box;
+  &__row {
+    background-color: #ffeead;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+  }
+  @at-root {
+    [class*='container__col-'] {
+      width: 150px;
+      height: 30px;
+      background-color: #ff6f69;
+      outline: 1px solid #ffcc5c;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+}*/

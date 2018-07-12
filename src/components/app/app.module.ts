@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreModule, MetaReducer } from '@ngrx/store';
 import { storeFreeze } from 'ngrx-store-freeze';
 import { EffectsModule } from '@ngrx/effects';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 // this would be done dynamically with webpack for builds
@@ -35,6 +36,7 @@ export const metaReducers: MetaReducer<any>[] = !environment.production
     RouterModule.forRoot(routes),
     HttpModule,
     HttpClientModule,
+    FlexLayoutModule,
     StoreModule.forRoot({}, {metaReducers}),
     EffectsModule.forRoot([])
   ],
