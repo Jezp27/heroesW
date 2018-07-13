@@ -11,7 +11,11 @@ $open-sans: 'Open Sans', sans-serif;
   background-color: $color;
 }
 
-
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
 
 
 //----------------------------------------------------------------------
@@ -43,12 +47,14 @@ img{
  align-items: center;
  font-size: 18px;
  font-family: $roboto-slab;
+ @include box-shadow(2px 2px 2px #6b6a6a);
 }
 
-
+h2{
+  color: rgba(255, 0, 0, 0.719);
+}
 
 .flex-container {
-  
   margin-top: 6%;
   margin-inline-start: 2%;
   margin-inline-end: 2%;
@@ -57,32 +63,30 @@ img{
   display: flex;
   border-radius: 2em;
   -webkit-flex-flow: row wrap;
-  flex-flow: row-wrap;
-   }
-
+  flex-flow: row-wrap; }
 
 .flex-item {
-  background: tomato;
+  background: rgb(255, 255, 255);
   padding: 5px;
   margin: 20px;
   border-radius: 0.5em;
-  
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  flex-basis: 30%;
+  -webkit-flex-flow: row wrap;
   flex-flow: row-wrap;
-   }
+  display: flex;
+  @include box-shadow(4px 3px 5px #666);
+  flex-basis:29%;
   .flex-item__other {
-    font-family: $roboto-slab;
+    font-family: "Roboto Slab", serif;
+    margin-block-start: 10px;
+    color:rgb(71, 68, 68);
     flex-basis: 50%;
-    background-color: blueviolet;
-    display:flex;
-    flex-direction:row;
-    justify-content:flex-start;
-  align-items:stretch;
+    flex-flow: row-wrap;
+    width: 50%;
+    //background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: auto; ;
     }
-
-.other {
-  background-color: red; }
+  }
