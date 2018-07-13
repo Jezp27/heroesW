@@ -20,6 +20,7 @@ export class HeroesComponent implements OnInit  {
         this.store.select(localStore.getAllHeroes).subscribe(state =>{
             this.heroes=state;
             //console.log(state);
+            console.log(this.heroes.find(hero => hero._nickname === 'Thor'));
       });
       this.store.dispatch(new localStore.LoadHeroes());
     }

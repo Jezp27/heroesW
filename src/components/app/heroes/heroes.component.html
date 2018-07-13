@@ -2,8 +2,7 @@
     <div class="flex-item row" *ngFor="let hero of heroes; let i=index" [ngSwitch]='i'>
         <div class="flex-item__other">
             <div class="hero_position">
-                <img src="{{hero._picture}}"> 
-                <div class="float">1st</div>
+                <img src="{{hero._picture}}" routerLink="/heroes/{{hero._nickname}}"> 
                 <div class="float" *ngSwitchCase='0'>{{i+1}}st</div>
                 <div class="float" *ngSwitchCase='1'>{{i+1}}nd</div>
                 <div class="float" *ngSwitchCase='2'>{{i+1}}rd</div>
@@ -11,9 +10,11 @@
             </div>
         </div>
         <div class="flex-item__other">
-                <h2>{{hero._nickname}}</h2>
                 <p align="left">
-                {{hero._name}}<br>
+                <b>{{hero._nickname}}</b>
+                <br>
+                {{hero._name}}
+                <br>
                 Estatura: {{hero._height}}</p>
         </div>
     </div>

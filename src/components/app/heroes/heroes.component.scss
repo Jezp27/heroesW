@@ -25,11 +25,16 @@ $open-sans: 'Open Sans', sans-serif;
 .hero_position {
   border-radius: 50%;
   height: 100%;
-  position: relative; 
+  position: relative;
+  :hover{
+    cursor: pointer;
+  }
 }
 img{
   border-radius: 50%;
   height: 150px;
+  display:flex;
+   
 }
 
 .float{
@@ -50,8 +55,9 @@ img{
  @include box-shadow(2px 2px 2px #6b6a6a);
 }
 
-h2{
+b{
   color: rgba(255, 0, 0, 0.719);
+
 }
 
 .flex-container {
@@ -82,6 +88,7 @@ h2{
     flex-basis: 50%;
     flex-flow: row-wrap;
     width: 50%;
+    min-width: 50px;
     //background-color: blueviolet;
     display: flex;
     flex-direction: row;

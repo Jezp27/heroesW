@@ -19,8 +19,8 @@ const environment = {
 
 
 export const routes: Routes =[
-  { path: '', redirectTo: '/heroes', pathMatch: 'full'},
-  { path:'heroes', loadChildren: './heroes/heroes.module#HeroesModule?sync=true'},
+  { path: '', pathMatch: 'full', redirectTo: 'heroes'},
+  { path:'heroes', loadChildren: './heroes/heroes.module#HeroesModule'}
 ];
 
 export const metaReducers: MetaReducer<any>[] = !environment.production
