@@ -23,20 +23,23 @@
 <div class="flex-container">
 
 
-    <div class="flex-item row" *ngFor="let hero of heroes">
+    <div class="flex-item row" *ngFor="let hero of heroes; let i=index" [ngSwitch]='i'>
 
         <div class="flex-item__other">
-            <div class="hero_position">
-                <img src="{{hero._picture}}">
-                <div class="float">1st</div>
+            <div class="position">
+                <img src="{{hero?._picture}}">
+                <div class="float" *ngSwitchCase='0'>{{i+1}}st</div>
+                <div class="float" *ngSwitchCase='1'>{{i+1}}nd</div>
+                <div class="float" *ngSwitchCase='2'>{{i+1}}rd</div>
+                <div class="float" *ngSwitchDefault>{{i+1}}th</div>
             </div>
         </div>
         <div class="flex-item__other">
-            <h2>{{hero._nickname}}</h2>
+            <h2>{{hero?._nickname}}</h2>
             <br>
-            <h4>{{hero._name}}</h4>
+            <h4>{{hero?._name}}</h4>
             <br>
-            <h4>Estatura: {{hero._height}}</h4>
+            <h4>Estatura: {{hero?._height}}</h4>
 
         </div>
     </div>

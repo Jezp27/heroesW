@@ -17,6 +17,12 @@ export const getHeroesState = createFeatureSelector<HeroState>('heroes');
 export const getHeroState = createSelector(getHeroesState, (state: HeroState) => state.heroes);
 
 //Selectors for each level state
-export const getAllHeroes= createSelector(getHeroState, Heroes.getHeroes);
+export const getHeroesEntities= createSelector(getHeroState, Heroes.getHeroesEntities);
+export const getAllHeroes= createSelector(
+  getHeroesEntities,
+  (entities) => {
+    return Object.keys(entities).map(id => entities[parseInt(id, 10)]);
+  }
+)
 export const getHeroesLoading= createSelector(getHeroState, Heroes.getHeroesLoading);
 export const getHeroesLoaded= createSelector(getHeroState, Heroes.getHeroesLoaded);

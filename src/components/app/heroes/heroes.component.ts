@@ -19,6 +19,7 @@ export class HeroesComponent implements OnInit  {
     ngOnInit(){
         this.store.select(localStore.getAllHeroes).subscribe(state =>{
             this.heroes=state;
+            console.log(state);
       });
       this.store.dispatch(new localStore.LoadHeroes());
     }
