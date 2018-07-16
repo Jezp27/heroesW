@@ -1,5 +1,5 @@
 <div class="flex-container">
-    <div class="flex-item row" *ngFor="let hero of heroes; let i=index" [ngSwitch]='i'>
+    <div class="flex-item" *ngFor="let hero of heroes; let i=index" [ngSwitch]='i'>
         <div class="sub-item">
             <div class="hero_position">
                 <img src="{{hero._picture}}" routerLink="/heroes/{{hero._nickname}}"> 
@@ -9,13 +9,13 @@
                 <div class="red_circle" *ngSwitchDefault>{{i+1}}th</div>
             </div>
         </div>
-        <div class="flex-item__other">
+        <div class="sub-item">
                 <p align="left">
                 <b>{{hero._nickname}}</b>
                 <br>
                 {{hero._name}}
                 <br>
-                Estatura: {{hero._height}} ft</p>
+                Estatura: {{estaturaEnMetros(hero._height)}} mt</p>
         </div>
     </div>
 </div>

@@ -15,7 +15,7 @@ export class LoadHeroes implements Action {
 
 export class LoadHeroesSuccess implements Action {
   readonly type = LOAD_HEROES_SUCCESS;
-  constructor(public payload: Hero[]) {}
+  constructor(public payload: any) {}
 }
 
 export class LoadHeroesFail implements Action{
@@ -25,7 +25,7 @@ export class LoadHeroesFail implements Action{
 
 export class UpdateHero implements Action{
   readonly type = UPDATE_HERO;
-  constructor(public payload: Hero){}
+  constructor(public payload: any){}
 }
 /*export class LoadHero implements Action{
   readonly type= LOAD_HERO;

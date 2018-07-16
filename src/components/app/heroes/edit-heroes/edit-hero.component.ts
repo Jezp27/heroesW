@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import * as localStore from '../store';
+import * as HeroActions from '../store/actions/hero.actions';
 import { Hero } from '../models/hero.model';
 import { Store } from '../../../../../node_modules/@ngrx/store';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -14,7 +16,7 @@ import { Store } from '../../../../../node_modules/@ngrx/store';
 
 export class EditHeroComponent implements OnInit  {
      hero : Hero;
-    constructor(private location: Location, private route: ActivatedRoute, private store: Store<localStore.HeroState>){}
+    constructor(private location: Location, private route: ActivatedRoute, private store: Store<localStore.HeroState>, private router: Router){}
      
     ngOnInit(){
         this.store.select(localStore.getAllHeroes).subscribe(state =>{
@@ -27,13 +29,10 @@ export class EditHeroComponent implements OnInit  {
     } 
 
     goBack(): void {
-        this.location.back();
+        this.router.navigate(['']);
       }
 
     updateHero(){
-       this.store.dispatch(localStore.updateHero(this.hero));
-        this.store.select(localStore.updateHero(this.hero)).subscribe();
-      console.log(this.hero);
-        
+        this.store.dispatch(new HeroActions.UpdateHero(this.hero));
     }
 }

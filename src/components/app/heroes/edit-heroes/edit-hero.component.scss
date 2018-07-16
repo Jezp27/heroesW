@@ -78,16 +78,19 @@ button{
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
-    :hover{
-        background-color: #1976D2;  
-    }
-    .submit{
-        background-color: $red_color;
-    }
-
-    .return{
-        background: $return_color;
-        text-align: left;
-    }
+    
 }
 
+@media screen and (max-width: 480px) {
+    .red_circle{
+      max-width:60px;
+      max-height: 60px;
+    }
+    img{
+      max-width:  90px;
+      max-height: 90px;
+    }
+    .flex-item{
+      min-width: 85%;
+    }
+  }
