@@ -10,6 +10,7 @@ import { storeFreeze } from 'ngrx-store-freeze';
 import { EffectsModule } from '@ngrx/effects';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { reducers } from './heroes/store';
+import { HeroEffects } from './heroes/store/effects/hero.effect';
 
 export const routes: Routes =[
   { path: '', pathMatch: 'full', redirectTo: 'heroes'},
@@ -28,7 +29,7 @@ export const routes: Routes =[
     RouterModule.forRoot(routes),   
     FlexLayoutModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([HeroEffects]),
   ],
   bootstrap: [AppComponent]
 })
