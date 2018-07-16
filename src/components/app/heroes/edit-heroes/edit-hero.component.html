@@ -1,3 +1,44 @@
-<h2>HOLIII</h2>
-
-<button (click)="goBack()">Regresar</button>
+<div class="flex-container">
+    <div class="container-principal">
+        <form class="formulario">
+            <h2>{{hero._nickname}}</h2>
+            <img src={{hero._picture}}>
+            <br>
+            <br>
+            <fieldset>
+                <div>
+                    <label for="name">Nombre Completo:</label>
+                    <br>
+                    <input [(ngModel)]="hero._name" type="text" name="name" required/>
+                    <br>
+                    <br>
+                </div>
+                <div>
+                    <label for="nickname">Alias:</label>
+                    <br>
+                    <input [(ngModel)]="hero._nickname" type="text" name="nickname" required/>
+                    <br>
+                    <br>
+                </div>
+                <div>
+                    <label for="height">Estatura: (en ft)</label>
+                    <br>
+                    <input [(ngModel)]="hero._height" name="height" required/>
+                    <br>
+                    <br>
+                </div>
+                <div>
+                    <label for="picture"> Link Imagen de Perfil:</label>
+                    <br>
+                    <input [(ngModel)]="hero._picture" type="url" name="picture" required pattern="(http|https)://.+">
+                    <br>
+                    <br>
+                </div>
+                <button class="submit" (click)="updateHero()">Actualizar</button>
+                <br>
+            </fieldset>
+        </form>
+        <br>
+        <button class="return" (click)="goBack()">Regresar</button>
+    </div>
+</div>

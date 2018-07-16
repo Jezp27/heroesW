@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 
+
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
@@ -11,6 +12,7 @@ import { HeroesComponent } from './heroes.component';
 import { EditHeroComponent} from './edit-heroes/edit-hero.component';
 import { HeroService} from './store/services/hero.service';
 import { reducers, effects } from './store';
+import { FormsModule } from '../../../../node_modules/@angular/forms';
 
 export const routes: Routes = [{ path: '', component: HeroesComponent },
                               { path: 'heroes', component: HeroesComponent },
@@ -24,6 +26,7 @@ export const routes: Routes = [{ path: '', component: HeroesComponent },
   ],
   imports: [
     CommonModule,
+    FormsModule,
     HttpModule,
     HttpClientModule,
     RouterModule.forChild(routes),

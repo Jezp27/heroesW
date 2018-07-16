@@ -19,10 +19,14 @@ export class HeroesComponent implements OnInit  {
     ngOnInit(){
         this.store.select(localStore.getAllHeroes).subscribe(state =>{
             this.heroes=state;
-            //console.log(state);
-            console.log(this.heroes.find(hero => hero._nickname === 'Thor'));
       });
       this.store.dispatch(new localStore.LoadHeroes());
     }
+
+    /*estaturaEnMetros(estaturaEnPies:string){
+        const conversion=3.28;
+        return (parseInt(estaturaEnPies)/conversion).toFixed(2);
+
+    }*/
 }
 

@@ -5,26 +5,16 @@ import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { StoreModule, MetaReducer } from '@ngrx/store';
+import { StoreModule, MetaReducer, ReducerObservable } from '@ngrx/store';
 import { storeFreeze } from 'ngrx-store-freeze';
 import { EffectsModule } from '@ngrx/effects';
 import {FlexLayoutModule} from '@angular/flex-layout';
-
-
-// this would be done dynamically with webpack for builds
-const environment = {
-  development: true,
-  production: false,
-};
-
+import { reducers } from './heroes/store';
 
 export const routes: Routes =[
   { path: '', pathMatch: 'full', redirectTo: 'heroes'},
   { path:'heroes', loadChildren: './heroes/heroes.module#HeroesModule'}
 ];
-
-export const metaReducers: MetaReducer<any>[] = !environment.production
-  ? [storeFreeze]: [];
 
 @NgModule({
   declarations: [
@@ -37,7 +27,7 @@ export const metaReducers: MetaReducer<any>[] = !environment.production
     HttpClientModule,
     RouterModule.forRoot(routes),   
     FlexLayoutModule,
-    StoreModule.forRoot({}, {metaReducers}),
+    StoreModule.forRoot(reducers),
     EffectsModule.forRoot([])
   ],
   bootstrap: [AppComponent]

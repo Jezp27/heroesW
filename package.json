@@ -4,7 +4,7 @@
   "description": "heroes training",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "karma start",
     "build": "webpack-dev-server --config webpack/webpack.config.js"
   },
   "keywords": [
@@ -53,6 +53,7 @@
     "jasmine": "^3.1.0",
     "karma": "^2.0.4",
     "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^3.0.0",
     "ngrx-store-freeze": "^0.2.4",
