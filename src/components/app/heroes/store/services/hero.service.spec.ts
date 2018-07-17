@@ -52,12 +52,12 @@ describe('HeroService', () => {
       );
 
       // HeroService should have made just one request to GET heroes from expected URL
-      const req = httpTestingController.expectOne('https://udem.herokuapp.com/heroes');
+      const mockRequest = httpTestingController.expectOne('https://udem.herokuapp.com/heroes');
        // Assert that the request is a GET.
-      expect(req.request.method).toEqual('GET');
+      expect(mockRequest.request.method).toEqual('GET');
 
       //Respond with the mock competencies, causing Observable to resolve
-      req.flush(heroes);
+      mockRequest.flush(heroes);
     });
   });
 });

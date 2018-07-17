@@ -18,7 +18,7 @@ export class HeroesComponent implements OnInit {
         this.store.select(localStore.getAllHeroes).subscribe(state => {
             this.heroes = state;
         });
-        this.store.dispatch(new localStore.LoadHeroes());
+        //this.store.dispatch(new localStore.LoadHeroes());
     }
 
     estaturaEnMetros(estaturaEnPies) {

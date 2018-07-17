@@ -1,3 +1,4 @@
+
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Raleway:400,700');
@@ -16,10 +17,18 @@ $transparent_white: rgba(255, 255, 255, 0.7);
 $text_color: rgb(71, 68, 68);
 $shadow_color: #6b6a6a;
 
-@mixin box-shadow($shadows...) {
-  -moz-box-shadow: $shadows;
-  -webkit-box-shadow: $shadows;
-  box-shadow: $shadows;
+
+//Compatibility prefixes
+//-moz-box-shadow: arguments
+$prefixes: "webkit", "moz", "ms", "o", "none";
+@mixin prefix($property, $arguments) {
+ @each $prefix in $prefixes {
+   @if $prefix == "none" {
+     #{$property}: $arguments;
+   } @else {
+     -#{$prefix}-#{$property}: $arguments;
+   } 
+ }
 }
 
 .hero_position {
@@ -34,7 +43,8 @@ $shadow_color: #6b6a6a;
 
 img{
   border-radius: $border-radius;
-  
+  max-width: 180px;
+  max-height: 150px;
 }
 
 @media screen and (max-width: 480px) {
@@ -70,7 +80,7 @@ b{
   align-items: center;
   font-size: 18px;
   font-family: $font;
-  @include box-shadow(2px 2px 2px $shadow_color);
+  @include prefix(box-shadow, 2px 2px 2px $shadow_color);
 }
 
 .flex-container {
@@ -81,31 +91,28 @@ b{
   background-color: $transparent_white;
   display: flex;
   border-radius: 2em;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row-wrap; 
+  @include prefix(flex-flow, row wrap);
 }
 .flex-item {
   background: rgb(255, 255, 255);
   padding: 5px;
   margin: 20px;
   border-radius: 0.5em;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row-wrap;
   display: flex;
   flex-basis:29%;
-  @include box-shadow(4px 3px 5px $shadow_color);
+  @include prefix(box-shadow, 4px 3px 5px $shadow_color);
+  @include prefix(flex-flow, row wrap);
 
   .sub-item {
     font-family: $font;
     margin-block-start: 10px;
     color: $text_color;
     flex-basis: 50%;
-    flex-flow: row-wrap;
     width: 50%;
     min-width: 50px;
     display: flex;
     flex-direction: row;
-    -webkit-flex-flow: row wrap;
+    @include prefix(flex-flow, row wrap);
     justify-content: flex-start;
     align-items: auto;  
     }

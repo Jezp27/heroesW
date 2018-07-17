@@ -6,10 +6,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule, MetaReducer, ReducerObservable } from '@ngrx/store';
-import { storeFreeze } from 'ngrx-store-freeze';
 import { EffectsModule } from '@ngrx/effects';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { reducers } from './heroes/store';
+import { HeroEffects } from '../app/heroes/store/effects/hero.effect';
+import { HeroService } from './heroes/store/services/hero.service';
 
 export const routes: Routes =[
   { path: '', pathMatch: 'full', redirectTo: 'heroes'},
@@ -28,8 +29,9 @@ export const routes: Routes =[
     RouterModule.forRoot(routes),   
     FlexLayoutModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([HeroEffects])
   ],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

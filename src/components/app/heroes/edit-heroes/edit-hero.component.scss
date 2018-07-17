@@ -18,10 +18,17 @@ $shadow_color: #6b6a6a;
 
 $borde: 2px;
 
-@mixin box-shadow($shadows...) {
-    -moz-box-shadow: $shadows;
-    -webkit-box-shadow: $shadows;
-    box-shadow: $shadows;
+//Compatibility prefixes
+//-moz-box-shadow: arguments
+$prefixes: "webkit", "moz", "ms", "o", "none";
+@mixin prefix($property, $arguments) {
+ @each $prefix in $prefixes {
+   @if $prefix == "none" {
+     #{$property}: $arguments;
+   } @else {
+     -#{$prefix}-#{$property}: $arguments;
+   } 
+ }
 }
 
 input{
@@ -36,7 +43,7 @@ h2{
 }
 
 img{
-    @include box-shadow(2px 2px 2px $shadow_color);
+    @include prefix(box-shadow, 2px 2px 2px $shadow_color);
 }
 
 .flex-container {
@@ -47,12 +54,11 @@ img{
     background-color: $transparent_white;
     display: flex;
     border-radius: 2em;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row-wrap; 
+    @include prefix(flex-flow, row wrap);
     .container-principal{
+        @include prefix(padding, 10px); 
+        @include prefix(margin, 10px);    
         font-family: $font-title; 
-        margin: 10px;
-        padding: 10px;
         width: 100%;
         text-align: center;
         .formulario{
@@ -60,7 +66,7 @@ img{
             padding: 40px;
             margin: auto;
             background-color: $soft_white;
-            @include box-shadow(2px 2px 2px $shadow_color);
+            @include prefix(box-shadow, 2px 2px 2px $shadow_color);
         }
     }
   }
@@ -75,10 +81,7 @@ button{
     font-family: $font;
     font-size: 16px;
     padding: 15px;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    
+    @include prefix(transition, all .3s ease);   
 }
 
 @media screen and (max-width: 480px) {

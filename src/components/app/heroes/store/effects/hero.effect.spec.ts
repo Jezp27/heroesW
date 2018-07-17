@@ -26,7 +26,6 @@ export function getActions() {
   return new TestActions();
 }
 
-
 describe('HeroEffects', () => {
   let actions$: TestActions;
   let service: HeroService;
@@ -75,6 +74,4 @@ describe('HeroEffects', () => {
       expect(effects.loadHeroes$).toBeObservable(expected);
     });
   });
-
-
 });

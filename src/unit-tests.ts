@@ -1,34 +1,24 @@
-import "core-js";
-import "core-js/es7/reflect";
-import "zone.js/dist/zone";
-import "zone.js/dist/long-stack-trace-zone";
-import "zone.js/dist/async-test";
-import "zone.js/dist/fake-async-test";
-import "zone.js/dist/sync-test";
-import "zone.js/dist/proxy";
-import "zone.js/dist/jasmine-patch";
+/*require('es6-shim');
+require('reflect-metadata');
+require('zone.js/dist/zone');
+require('zone.js/dist/long-stack-trace-zone');
+require('zone.js/dist/async-test');
+require('zone.js/dist/fake-async-test');
+require('zone.js/dist/sync-test');
+require('zone.js/dist/proxy');
+require('zone.js/dist/jasmine-patch');
 
-// Unfortunately there"s no typing for the `__karma__` variable. Just declare it as any.
-declare var __karma__: any;
-declare var System: any;
+const browserTesting = require('@angular/platform-browser-dynamic/testing');
+const coreTesting = require('@angular/core/testing');
+const context = require.context('./src/', true, /\.spec\.ts$/);
 
-// Prevent Karma from running prematurely.
-__karma__.loaded = function () {};
+Error.stackTraceLimit = Infinity;
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 2000;
 
-Promise.all([
-    System.import("@angular/core/testing"),
-    System.import("@angular/platform-browser-dynamic/testing")
-])
-// First, initialize the Angular testing environment.
-    .then(([testing, testingBrowser]: any) => {
-        testing.getTestBed().initTestEnvironment(
-            testingBrowser.BrowserDynamicTestingModule,
-            testingBrowser.platformBrowserDynamicTesting()
-        );
-    })
-    // Then we find all the tests.
-    .then<any>((): any => (require as any).context("./unit", true, /\.spec\.ts/))
-    // And load the modules.
-    .then((context: any) => context.keys().map(context))
-    // Finally, start Karma to run the tests.
-    .then(__karma__.start, __karma__.error);
+coreTesting.TestBed.resetTestEnvironment();
+coreTesting.TestBed.initTestEnvironment(
+  browserTesting.BrowserDynamicTestingModule,
+  browserTesting.platformBrowserDynamicTesting()
+);
+
+context.keys().forEach(context);*/
