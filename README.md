@@ -16,5 +16,6 @@ Running
     npm run built
     Visit the app at http://localhost:9000.
 
-Tests
+Running Tests
+
     npm run test
