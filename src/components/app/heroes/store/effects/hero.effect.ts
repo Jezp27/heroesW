@@ -3,7 +3,6 @@ import { Effect, Actions } from '@ngrx/effects';
 import * as heroActions from '../actions/hero.actions';
 import { switchMap, map, catchError } from 'rxjs/operators';
 import { HeroService } from '../../store/services/hero.service';
-import { of } from 'rxjs/Observable/of';
 
 @Injectable()
 export class HeroEffects{

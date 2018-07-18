@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as localStore from '../app/heroes/store';
+import * as heroStore from '../app/heroes/store';
 
 @Component({
     selector: 'app-root',
@@ -8,9 +8,9 @@ import * as localStore from '../app/heroes/store';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit { 
-    constructor(private store: Store<localStore.HeroState>) { }
+    constructor(private store: Store<heroStore.HeroState>) { }
     
     ngOnInit() {
-        this.store.dispatch(new localStore.LoadHeroes());
+        this.store.dispatch(new heroStore.LoadHeroes());
     }
 }

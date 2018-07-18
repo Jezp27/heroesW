@@ -31,7 +31,7 @@ describe('HeroEffects', () => {
   let service: HeroService;
   let effects: HeroEffects;
 
-  const heroes = [
+  const mockHeroes = [
     {
       _name: 'Anthony Stark',
       _height: 6,
@@ -60,16 +60,16 @@ describe('HeroEffects', () => {
     service = TestBed.get(HeroService);
     effects = TestBed.get(HeroEffects);
 
-    spyOn(service, 'getAllHeroes').and.returnValue(of(heroes));
+    spyOn(service, 'getAllHeroes').and.returnValue(of(mockHeroes));
   });
 
   describe('loadHeroes$', () => {
     it('should return a collection from LoadHeroesSuccess', () => {
       const action = new HeroActions.LoadHeroes();
-      const completion = new HeroActions.LoadHeroesSuccess(heroes);
+      const actionSuccess = new HeroActions.LoadHeroesSuccess(mockHeroes);
 
-      actions$.stream = hot('-a', { a: action });
-      const expected = cold('-b', { b: completion });
+      actions$.stream = hot('-a', { a: action });  //or cold too Cambia el source de la accion
+      const expected = cold('-b', { b: actionSuccess });
 
       expect(effects.loadHeroes$).toBeObservable(expected);
     });

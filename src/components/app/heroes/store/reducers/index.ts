@@ -18,7 +18,4 @@ export const getHeroState = createSelector(getHeroesState, (state: HeroState) =>
 
 //Selectors for each level state
 export const getAllHeroes= createSelector(getHeroState, Heroes.getHeroes);
-export const getHeroesLoading= createSelector(getHeroState, Heroes.getHeroesLoading);
-export const getHeroesLoaded= createSelector(getHeroState, Heroes.getHeroesLoaded);
 export const updateHero= createSelector(getHeroState, Heroes.updateHero);
-//export const getHero= createSelector(getHeroState, Heroes.getHero);

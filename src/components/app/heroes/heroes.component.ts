@@ -21,9 +21,9 @@ export class HeroesComponent implements OnInit {
         //this.store.dispatch(new localStore.LoadHeroes());
     }
 
-    estaturaEnMetros(estaturaEnPies) {
+    heightConversion(height) {
         const conversion = 3.28;
-        return (estaturaEnPies / conversion).toFixed(2);
+        return (height / conversion).toFixed(2);
     }
 }
 
