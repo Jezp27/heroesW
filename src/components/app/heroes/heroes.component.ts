@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as localStore from '../heroes/store';
+import * as heroStore from '../heroes/store';
 import { Hero } from '../heroes/models/hero.model';
 
 @Component({
@@ -12,10 +12,10 @@ import { Hero } from '../heroes/models/hero.model';
 export class HeroesComponent implements OnInit {
     heroes: Hero[];
 
-    constructor(private store: Store<localStore.HeroState>) { }
+    constructor(private store: Store<heroStore.HeroState>) { }
 
     ngOnInit() {
-        this.store.select(localStore.getAllHeroes).subscribe(state => {
+        this.store.select(heroStore.getAllHeroes).subscribe(state => {
             this.heroes = state;
         });
         //this.store.dispatch(new localStore.LoadHeroes());

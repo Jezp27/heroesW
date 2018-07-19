@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
     constructor(private store: Store<heroStore.HeroState>) { }
     
     ngOnInit() {
-        this.store.dispatch(new heroStore.LoadHeroes());
+        //this.store.dispatch(new heroStore.LoadHeroes());
+        console.log(this.store.dispatch(new heroStore.LoadHeroes()));
     }
 }

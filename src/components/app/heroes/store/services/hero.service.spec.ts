@@ -45,6 +45,7 @@ describe('HeroService', () => {
 
     beforeEach(() => {
       heroService = TestBed.get(HeroService);
+    });
     
     it('should return the expected number of heroes', () => {
       heroService.getAllHeroes().subscribe(
@@ -56,9 +57,9 @@ describe('HeroService', () => {
        // Assert that the request is a GET.
       expect(mockRequest.request.method).toEqual('GET');
 
-      //Respond with the mock competencies, causing Observable to resolve
+      //Respond with the mock competencies:  Observable to resolve
       mockRequest.flush(heroes);
     });
-  });
+  
 });
 });

@@ -1,20 +1,26 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { EditHeroComponent } from './edit-hero.component';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 
 describe('EditHeroComponent', ()=> {
   let component: EditHeroComponent;
   let fixture: ComponentFixture<EditHeroComponent>;
+  const router = {navigate: jasmine.createSpy('navigate')};
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [EditHeroComponent],
-     
+      providers: [
+        { provide: Router, useValue: router },
+      ],
     });
 
     fixture = TestBed.createComponent(EditHeroComponent);
     component = fixture.componentInstance;
+    location = TestBed.get(Location);
+    spyOn(component, 'goBack');
+    spyOn(router, 'navigate');
   });
 
   class MockActivatedRoute extends ActivatedRoute {
@@ -30,7 +36,17 @@ describe('EditHeroComponent', ()=> {
     expect(component.interceptNickname()).toEqual("Thor");
   });
 
-  it('' , () =>{
+  describe('GoBack function', () => {
+    it('Function calls route.navigete() method', ()=>{
+      component.goBack();
+      expect(router.navigate).toHaveBeenCalled();
+    });
 
-  });
+    it('Go back function navigate to /heroes' , () => {
+      component.goBack();
+      expect(router.navigate).toHaveBeenCalledWith(['']);
+      //expect(location.pathname).toBe('/heroes');
+    });
+  })
+  
 });

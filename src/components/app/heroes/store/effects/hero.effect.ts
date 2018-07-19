@@ -12,6 +12,8 @@ export class HeroEffects{
   loadHeroes$ = this.actions$.ofType(heroActions.LOAD_HEROES)
     .pipe(
       switchMap(() => {
+        
+      console.log("effect");
         return this.heroService.getAllHeroes().pipe(
           map(heroes => new heroActions.LoadHeroesSuccess(heroes)))
       }));

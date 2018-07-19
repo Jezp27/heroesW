@@ -30,9 +30,10 @@ export class EditHeroComponent implements OnInit  {
 
     goBack(): void {
         this.router.navigate(['']);
-      }
+    }
 
     updateHero(){
+        console.log("update");
         this.store.dispatch(new HeroActions.UpdateHero(this.hero));
     }
 }
