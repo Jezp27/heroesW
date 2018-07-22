@@ -1,40 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+@import 'src/styles.scss';
 
-// Fonts
-$font: 'Roboto Slab', serif;   
-$font-title: 'Black Han Sans', sans-serif;
-
-//colors
-$white: white;
-$transparent_white: rgba(255, 255, 255, 0.7);
 $soft_white:  rgba(255, 255, 255, 0.753);
-$red_color: rgba(255,0,0,0.5);
-$return_color: rgba(31, 86, 112, 0.8);
-$white: white;
-$transparent_white: rgba(255, 255, 255, 0.7);
 $text_color: rgb(71, 68, 68);
-$shadow_color: #6b6a6a;
-
-$borde: 2px;
-
-//Compatibility prefixes
-//-moz-box-shadow: arguments
-$prefixes: "webkit", "moz", "ms", "o", "none";
-@mixin prefix($property, $arguments) {
- @each $prefix in $prefixes {
-   @if $prefix == "none" {
-     #{$property}: $arguments;
-   } @else {
-     -#{$prefix}-#{$property}: $arguments;
-   } 
- }
-}
+$border: 2px;
 
 input{
     font-family: $font;
     font-size:100%;
-    border-bottom-color: red;
+    border-bottom-color: $red_color;
 }
 
 h2{
@@ -47,34 +20,27 @@ img{
 }
 
 .flex-container {
-    margin-top: 6%;
-    margin-inline-start: 2%;
-    margin-inline-end: 2%;
-    background-color: $white;
-    background-color: $transparent_white;
-    display: flex;
-    border-radius: 2em;
-    @include prefix(flex-flow, row wrap);
-    .container-principal{
-        @include prefix(padding, 10px); 
-        @include prefix(margin, 10px);    
-        font-family: $font-title; 
-        width: 100%;
-        text-align: center;
-        .formulario{
-            max-width: 500px;
-            padding: 40px;
-            margin: auto;
-            background-color: $soft_white;
-            @include prefix(box-shadow, 2px 2px 2px $shadow_color);
-        }
+  @extend %principal-container;
+  .content{
+    @include prefix(padding, 10px); 
+    @include prefix(margin, 10px);    
+    font-family: $font-title; 
+    width: 100%;
+    text-align: center;
+      .form{
+        max-width: 500px;
+        padding: 40px;
+        margin: auto;
+        background-color: $soft_white;
+        @include prefix(box-shadow, 2px 2px 2px $shadow_color);
+      }
     }
   }
 
 button{
     background: $red_color;
     border-radius: 1px;
-    border: $borde solid $white;
+    border: $border solid white;
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -84,16 +50,3 @@ button{
     @include prefix(transition, all .3s ease);   
 }
 
-@media screen and (max-width: 480px) {
-    .red_circle{
-      max-width:60px;
-      max-height: 60px;
-    }
-    img{
-      max-width:  90px;
-      max-height: 90px;
-    }
-    .flex-item{
-      min-width: 85%;
-    }
-  }

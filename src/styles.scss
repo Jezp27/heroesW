@@ -1,0 +1,53 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+
+$background: url(../../assets/img/HeroesBackground.jpg); 
+
+//fonts
+$font: 'Nanum Gothic', sans-serif;  
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
+$font-title: 'Black Han Sans', sans-serif;
+$font-size: 14px;
+
+//colors
+$red_color: rgba(206, 10, 10, 0.7);
+$transparent_white: rgba(255, 255, 255, 0.7);
+$shadow_color: #6b6a6a;
+
+
+$border-radius: 50%;
+
+//Breakpoints
+$break-small: 320px;
+$break-large: 480px;
+
+@mixin size($width, $height){
+    width: $width;
+    height: $height;
+}
+
+//Compatibility prefixes
+//-moz-box-shadow: arguments
+$prefixes: "webkit", "moz", "ms", "o", "none";
+@mixin prefix($property, $arguments) {
+ @each $prefix in $prefixes {
+   @if $prefix == "none" {
+     #{$property}: $arguments;
+   } @else {
+     -#{$prefix}-#{$property}: $arguments;
+   } 
+ }
+}
+
+%principal-container{
+  display: flex;
+  flex-wrap:wrap;
+  background-color: $transparent_white;
+  border-radius: 2em;
+  margin-top: 6%;
+  margin-inline-start: 2%;
+  margin-inline-end: 2%;
+  justify-content: space-around;
+}

@@ -1,25 +1,18 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
-
-$roboto-slab: 'Roboto Slab', serif;   
-$open-sans: 'Open Sans', sans-serif;
-$background: url(../../assets/img/HeroesBackground.jpg) ;
+@import 'src/styles.scss';
 
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-   /* The image used */
   background-image: $background;
   position: 0 0;
   height: 100%;
-  font-family: $roboto-slab;
-   /* Center and scale the image nicely */
-   background-position: top;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-attachment: fixed;
+  background-position: top;
+  background-image: $background;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-
 
 
 
