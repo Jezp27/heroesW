@@ -7,6 +7,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { HeroService } from './store/services/hero.service';
 import { and } from '@angular/router/src/utils/collection';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
+import * as HeroReducer  from './store/reducers/hero.reducer';
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -20,7 +22,8 @@ describe('HeroesComponent', () => {
           ...heroStore.reducers,
         }),
         EffectsModule.forRoot([HeroEffects]),
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientModule
       ],
       declarations: [HeroesComponent],
       providers:[
@@ -45,13 +48,30 @@ describe('HeroesComponent', () => {
     fixture= TestBed.createComponent(HeroesComponent);
     component= fixture.componentInstance;
     store= TestBed.get(Store);
-    spyOn(store, 'select').and.returnValue(heroes);
+    spyOn(store, 'select').and.callThrough();
     
   });
 
   describe('Should select the getAllHeroes action', () =>{
     it('Should call getAllHeroes action', () =>{
-      component.ngOnInit();  
+      const heroes = [
+        {
+          _name: 'Anthony Stark',
+          _height: 6,
+          _nickname: 'Iron Man',
+          _picture: 'http://',
+        },
+        {
+          _name: 'Bruce Wayne',
+          _height: 4,
+          _nickname: 'Batman',
+          _picture: 'http://',
+        },
+      ];
+       
+      const initialState = HeroReducer.initialState;
+      const actualState = {...initialState, heroes};
+      component.ngOnInit(); 
       expect(store.select).toHaveBeenCalledWith(heroStore.getAllHeroes);
     });
 

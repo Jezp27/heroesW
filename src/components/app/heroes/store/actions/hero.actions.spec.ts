@@ -5,7 +5,7 @@ describe('Hero Actions can be created correctly', () => {
   describe('Load Heroes', () => {
     it('should create a new Load Heroes action', () =>{
       const action = new HeroActions.LoadHeroes();
-      expect(action).toEqual({type: HeroActions.LOAD_HEROES});
+      expect({...action}).toEqual({type: HeroActions.LOAD_HEROES});
     });
   });
 
@@ -27,7 +27,7 @@ describe('Hero Actions can be created correctly', () => {
         ];
 
       const action = new HeroActions.LoadHeroesSuccess(Mockheroes);
-      expect(action).toEqual({type: HeroActions.LOAD_HEROES_SUCCESS, payload: Mockheroes});
+      expect({...action}).toEqual({type: HeroActions.LOAD_HEROES_SUCCESS, payload: Mockheroes});
       });
   });
 
@@ -42,7 +42,7 @@ describe('Hero Actions can be created correctly', () => {
         };
 
       const action = new HeroActions.UpdateHero(HeroToUpdate);
-      expect(action).toEqual({type: HeroActions.UPDATE_HERO, payload: HeroToUpdate }); 
+      expect({...action}).toEqual({type: HeroActions.UPDATE_HERO, payload: HeroToUpdate }); 
     })
   });
 });

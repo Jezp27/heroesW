@@ -1,5 +1,6 @@
 import * as HeroReducer from '../reducers/hero.reducer';
 import * as HeroActions from '../actions/hero.actions';
+import { HeroState } from '.';
 
 describe('Hero Reducer', () =>{
 
@@ -69,14 +70,28 @@ describe('Hero Reducer', () =>{
           }
         ];
 
+      
+
       const initialState = HeroReducer.initialState;
-      const actualState = {...initialState, mockHeroes};
-
+      const previousState= {...initialState, mockHeroes};
       const action = new HeroActions.UpdateHero(heroToUpdate);
-      const newState = HeroReducer.reducer(actualState, action);  
+      const newState = HeroReducer.reducer(previousState, action);
 
-      expect(Object.keys(newState.data).length).toEqual(2);
       expect(newState.data).toEqual(heroesUpdated);
+
+      //let state: HeroReducer.HeroState;
+      //state= {...initialState, mockHeroes};
+
+
+      //const actionLoad = new HeroActions.LoadHeroesSuccess(mockHeroes);
+     //state = HeroReducer.reducer(initialState, actionLoad );
+
+      //const action = new HeroActions.UpdateHero(heroToUpdate);
+      //const newState = HeroReducer.reducer(state, action);  
+
+      //expect((newState.data).length).toEqual(2);
+      expect(newState.data).toEqual(heroesUpdated);
+    
     });
   });
 });

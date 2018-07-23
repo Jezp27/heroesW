@@ -10,18 +10,18 @@
     <h2>Heroes</h2>
     <table cellspacing="0" cellpadding="0" border="0">
       <tr class="overview">
-        <td colspan="3" title="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0">Browser: Firefox 61.0.0 (Windows 10 0.0.0)</td>
+        <td colspan="3" title="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36">Browser: Chrome 67.0.3396 (Windows 10 0.0.0)</td>
       </tr>
       <tr class="overview">
-        <td colspan="3">Timestamp: 2018-7-23 13:18:49</td>
+        <td colspan="3">Timestamp: 2018-7-23 17:28:44</td>
       </tr>
       <tr>
         <td colspan="3">
-          15 tests / 
+          13 tests / 
           0 errors / 
-          11 failures / 
+          5 failures / 
           0 skipped / 
-          runtime: 0.7s
+          runtime: 0.273s
         </td>
       </tr>
       <tr class="header">
@@ -30,184 +30,78 @@
         <td>Suite / Results</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.1s</td>
+        <td>Passed in 0.055s</td>
         <td>should be created</td>
         <td>appComponent</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.053s</td>
+        <td>Passed in 0.022s</td>
         <td>Should dispatch the LoadHeroes action when created</td>
         <td>appComponent</td>
       </tr>
       <tr class="fail">
         <td>Failed</td>
-        <td>interceptNickname returns the actual nickname on the route</td>
-        <td>
-          EditHeroComponent
-          <br />TypeError: router.routerState is undefined in src/unit-tests.ts (line 52194)
-rootRoute@src/unit-tests.ts:52194:5
-_callFactory@src/unit-tests.ts:11270:20
-_createProviderInstance$1@src/unit-tests.ts:11222:26
-resolveNgModuleDep@src/unit-tests.ts:11204:17
-NgModuleRef_.prototype.get@src/unit-tests.ts:12441:16
-resolveDep@src/unit-tests.ts:12931:12
-createClass@src/unit-tests.ts:12801:32
-createDirectiveInstance@src/unit-tests.ts:12638:37
-createViewNodes@src/unit-tests.ts:14096:53
-createRootView@src/unit-tests.ts:13985:5
-callWithDebugContext@src/unit-tests.ts:15410:39
-debugCreateRootView@src/unit-tests.ts:14693:12
-ComponentFactory_.prototype.create@src/unit-tests.ts:11590:37
-initComponent@src/unit-tests.ts:132606:32
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-onInvoke@src/unit-tests.ts:5072:24
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-NgZone.prototype.run@src/unit-tests.ts:4889:54
-TestBed.prototype.createComponent@src/unit-tests.ts:132609:51
-TestBed.createComponent@src/unit-tests.ts:132293:16
-@src/unit-tests.ts:154800:19
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-          <br />TypeError: component is undefined in src/unit-tests.ts (line 154818)
-@src/unit-tests.ts:154818:9
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-        </td>
-      </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>Function calls route.navigate() method</td>
+        <td>should tell router to navigate when Regresar is clicked</td>
         <td>
           EditHeroComponent &raquo; GoBack function
-          <br />TypeError: router.routerState is undefined in src/unit-tests.ts (line 52194)
-rootRoute@src/unit-tests.ts:52194:5
-_callFactory@src/unit-tests.ts:11270:20
-_createProviderInstance$1@src/unit-tests.ts:11222:26
-resolveNgModuleDep@src/unit-tests.ts:11204:17
-NgModuleRef_.prototype.get@src/unit-tests.ts:12441:16
-resolveDep@src/unit-tests.ts:12931:12
-createClass@src/unit-tests.ts:12801:32
-createDirectiveInstance@src/unit-tests.ts:12638:37
-createViewNodes@src/unit-tests.ts:14096:53
-createRootView@src/unit-tests.ts:13985:5
-callWithDebugContext@src/unit-tests.ts:15410:39
-debugCreateRootView@src/unit-tests.ts:14693:12
-ComponentFactory_.prototype.create@src/unit-tests.ts:11590:37
-initComponent@src/unit-tests.ts:132606:32
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-onInvoke@src/unit-tests.ts:5072:24
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-NgZone.prototype.run@src/unit-tests.ts:4889:54
-TestBed.prototype.createComponent@src/unit-tests.ts:132609:51
-TestBed.createComponent@src/unit-tests.ts:132293:16
-@src/unit-tests.ts:154800:19
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
+          <br />Error: StaticInjectorError(DynamicTestModule)[EditHeroComponent -&gt; Store]: 
+  StaticInjectorError(Platform: core)[EditHeroComponent -&gt; Store]: 
+    NullInjectorError: No provider for Store!
+    at _NullInjector.get (src/unit-tests.ts:1315:19)
+    at resolveToken (src/unit-tests.ts:1613:24)
+    at tryResolveToken (src/unit-tests.ts:1555:16)
+    at StaticInjector.get (src/unit-tests.ts:1423:20)
+    at resolveToken (src/unit-tests.ts:1613:24)
+    at tryResolveToken (src/unit-tests.ts:1555:16)
+    at StaticInjector.get (src/unit-tests.ts:1423:20)
+    at resolveNgModuleDep (src/unit-tests.ts:11208:25)
+    at NgModuleRef_.get (src/unit-tests.ts:12441:16)
+    at resolveDep (src/unit-tests.ts:12931:45)
+    at createClass (src/unit-tests.ts:12801:32)
+    at createDirectiveInstance (src/unit-tests.ts:12638:37)
+    at createViewNodes (src/unit-tests.ts:14096:53)
+    at createRootView (src/unit-tests.ts:13985:5)
+    at callWithDebugContext (src/unit-tests.ts:15410:42)
+    at Object.debugCreateRootView [as createRootView] (src/unit-tests.ts:14693:12)
+    at ComponentFactory_.create (src/unit-tests.ts:11590:46)
+    at initComponent (src/unit-tests.ts:132606:49)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
+    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
+    at Object.onInvoke (src/unit-tests.ts:5072:33)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
+    at Zone.run (src/unit-tests.ts:127882:43)
+    at NgZone.run (src/unit-tests.ts:4889:69)
+    at TestBed.createComponent (src/unit-tests.ts:132609:58)
+    at Function.TestBed.createComponent (src/unit-tests.ts:132293:29)
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:154863:37)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
+    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
+    at Zone.run (src/unit-tests.ts:127882:43)
+    at runInTestZone (src/unit-tests.ts:155165:34)
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
+    at Zone.runTask (src/unit-tests.ts:127932:47)
+    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
 
-          <br />TypeError: component is undefined in src/unit-tests.ts (line 154822)
-@src/unit-tests.ts:154822:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-        </td>
-      </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>Go back function navigate to /heroes</td>
-        <td>
-          EditHeroComponent &raquo; GoBack function
-          <br />TypeError: router.routerState is undefined in src/unit-tests.ts (line 52194)
-rootRoute@src/unit-tests.ts:52194:5
-_callFactory@src/unit-tests.ts:11270:20
-_createProviderInstance$1@src/unit-tests.ts:11222:26
-resolveNgModuleDep@src/unit-tests.ts:11204:17
-NgModuleRef_.prototype.get@src/unit-tests.ts:12441:16
-resolveDep@src/unit-tests.ts:12931:12
-createClass@src/unit-tests.ts:12801:32
-createDirectiveInstance@src/unit-tests.ts:12638:37
-createViewNodes@src/unit-tests.ts:14096:53
-createRootView@src/unit-tests.ts:13985:5
-callWithDebugContext@src/unit-tests.ts:15410:39
-debugCreateRootView@src/unit-tests.ts:14693:12
-ComponentFactory_.prototype.create@src/unit-tests.ts:11590:37
-initComponent@src/unit-tests.ts:132606:32
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-onInvoke@src/unit-tests.ts:5072:24
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-NgZone.prototype.run@src/unit-tests.ts:4889:54
-TestBed.prototype.createComponent@src/unit-tests.ts:132609:51
-TestBed.createComponent@src/unit-tests.ts:132293:16
-@src/unit-tests.ts:154800:19
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-          <br />TypeError: component is undefined in src/unit-tests.ts (line 154826)
-@src/unit-tests.ts:154826:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
+          <br />TypeError: Cannot read property 'goBack' of undefined
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:154869:23)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
+    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
+    at Zone.run (src/unit-tests.ts:127882:43)
+    at runInTestZone (src/unit-tests.ts:155165:34)
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
+    at Zone.runTask (src/unit-tests.ts:127932:47)
+    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
 
         </td>
       </tr>
@@ -216,55 +110,20 @@ drainMicroTaskQueue@src/unit-tests.ts:128339:25
         <td>Should call getAllHeroes action</td>
         <td>
           HeroesComponent &raquo; Should select the getAllHeroes action
-          <br />Error: StaticInjectorError(DynamicTestModule)[HeroService -&gt; HttpClient]: 
-  StaticInjectorError(Platform: core)[HeroService -&gt; HttpClient]: 
-    NullInjectorError: No provider for HttpClient! in src/unit-tests.ts (line 1315)
-_NullInjector.prototype.get@src/unit-tests.ts:1315:19
-resolveToken@src/unit-tests.ts:1613:17
-tryResolveToken@src/unit-tests.ts:1555:16
-StaticInjector.prototype.get@src/unit-tests.ts:1423:20
-resolveToken@src/unit-tests.ts:1613:17
-tryResolveToken@src/unit-tests.ts:1555:16
-StaticInjector.prototype.get@src/unit-tests.ts:1423:20
-resolveNgModuleDep@src/unit-tests.ts:11208:12
-_createClass@src/unit-tests.ts:11245:29
-_createProviderInstance$1@src/unit-tests.ts:11219:26
-initNgModule@src/unit-tests.ts:11172:28
-NgModuleRef_@src/unit-tests.ts:12427:9
-createNgModuleRef@src/unit-tests.ts:12416:12
-debugCreateNgModuleRef@src/unit-tests.ts:14750:12
-NgModuleFactory_.prototype.create@src/unit-tests.ts:15888:16
-TestBed.prototype._initIfNeeded@src/unit-tests.ts:132462:27
-TestBed.prototype.createComponent@src/unit-tests.ts:132594:9
-TestBed.createComponent@src/unit-tests.ts:132293:16
-@src/unit-tests.ts:154738:19
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-          <br />TypeError: component is undefined in src/unit-tests.ts (line 154745)
-@src/unit-tests.ts:154745:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
+          <br />TypeError: Cannot set property 'state' of undefined
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:154818:31)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
+    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
+    at Zone.run (src/unit-tests.ts:127882:43)
+    at runInTestZone (src/unit-tests.ts:155165:34)
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
+    at Zone.runTask (src/unit-tests.ts:127932:47)
+    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
 
         </td>
       </tr>
@@ -273,180 +132,66 @@ drainMicroTaskQueue@src/unit-tests.ts:128339:25
         <td>Should populate Heroes array with the right data</td>
         <td>
           HeroesComponent &raquo; Should select the getAllHeroes action
-          <br />Error: StaticInjectorError(DynamicTestModule)[HeroService -&gt; HttpClient]: 
-  StaticInjectorError(Platform: core)[HeroService -&gt; HttpClient]: 
-    NullInjectorError: No provider for HttpClient! in src/unit-tests.ts (line 1315)
-_NullInjector.prototype.get@src/unit-tests.ts:1315:19
-resolveToken@src/unit-tests.ts:1613:17
-tryResolveToken@src/unit-tests.ts:1555:16
-StaticInjector.prototype.get@src/unit-tests.ts:1423:20
-resolveToken@src/unit-tests.ts:1613:17
-tryResolveToken@src/unit-tests.ts:1555:16
-StaticInjector.prototype.get@src/unit-tests.ts:1423:20
-resolveNgModuleDep@src/unit-tests.ts:11208:12
-_createClass@src/unit-tests.ts:11245:29
-_createProviderInstance$1@src/unit-tests.ts:11219:26
-initNgModule@src/unit-tests.ts:11172:28
-NgModuleRef_@src/unit-tests.ts:12427:9
-createNgModuleRef@src/unit-tests.ts:12416:12
-debugCreateNgModuleRef@src/unit-tests.ts:14750:12
-NgModuleFactory_.prototype.create@src/unit-tests.ts:15888:16
-TestBed.prototype._initIfNeeded@src/unit-tests.ts:132462:27
-TestBed.prototype.createComponent@src/unit-tests.ts:132594:9
-TestBed.createComponent@src/unit-tests.ts:132293:16
-@src/unit-tests.ts:154738:19
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-          <br />TypeError: component is undefined in src/unit-tests.ts (line 154749)
-@src/unit-tests.ts:154749:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-        </td>
-      </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>Should return the right conversion from meters to feet </td>
-        <td>
-          HeroesComponent &raquo; heightConversion function
-          <br />Error: StaticInjectorError(DynamicTestModule)[HeroService -&gt; HttpClient]: 
-  StaticInjectorError(Platform: core)[HeroService -&gt; HttpClient]: 
-    NullInjectorError: No provider for HttpClient! in src/unit-tests.ts (line 1315)
-_NullInjector.prototype.get@src/unit-tests.ts:1315:19
-resolveToken@src/unit-tests.ts:1613:17
-tryResolveToken@src/unit-tests.ts:1555:16
-StaticInjector.prototype.get@src/unit-tests.ts:1423:20
-resolveToken@src/unit-tests.ts:1613:17
-tryResolveToken@src/unit-tests.ts:1555:16
-StaticInjector.prototype.get@src/unit-tests.ts:1423:20
-resolveNgModuleDep@src/unit-tests.ts:11208:12
-_createClass@src/unit-tests.ts:11245:29
-_createProviderInstance$1@src/unit-tests.ts:11219:26
-initNgModule@src/unit-tests.ts:11172:28
-NgModuleRef_@src/unit-tests.ts:12427:9
-createNgModuleRef@src/unit-tests.ts:12416:12
-debugCreateNgModuleRef@src/unit-tests.ts:14750:12
-NgModuleFactory_.prototype.create@src/unit-tests.ts:15888:16
-TestBed.prototype._initIfNeeded@src/unit-tests.ts:132462:27
-TestBed.prototype.createComponent@src/unit-tests.ts:132594:9
-TestBed.createComponent@src/unit-tests.ts:132293:16
-@src/unit-tests.ts:154738:19
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-          <br />TypeError: component is undefined in src/unit-tests.ts (line 154757)
-@src/unit-tests.ts:154757:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-        </td>
-      </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>should create a new Load Heroes action</td>
-        <td>
-          Hero Actions can be created correctly &raquo; Load Heroes
-          <br />Expected object to be a kind of Object, but was LoadHeroes({ type: '[Heroes] Load Heroes' }).
-@src/unit-tests.ts:154647:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-        </td>
-      </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>should create a new Load Hero Success action</td>
-        <td>
-          Hero Actions can be created correctly &raquo; Load Heroes Success
-          <br />Expected object to be a kind of Object, but was LoadHeroesSuccess({ payload: [ Object({ _name: 'Anthony Stark', _height: 6.1, _picture: 'http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg', _nickname: 'Iron Man' }), Object({ _name: 'Peter Parker', _height: 5.1, _picture: 'http://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg', _nickname: 'Spider-Man' }) ], type: '[Heroes] Load Heroes Succes' }).
-@src/unit-tests.ts:154667:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
-
-        </td>
-      </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>should create a new Update Hero action</td>
-        <td>
-          Hero Actions can be created correctly &raquo; Update Hero
-          <br />Expected object to be a kind of Object, but was UpdateHero({ payload: Object({ _name: 'Anthony Stark', _height: 6.1, _picture: 'http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg', _nickname: 'Iron Man' }), type: '[Heroes] Update Hero' }).
-@src/unit-tests.ts:154679:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
+          <br />TypeError: Cannot read property 'data' of undefined
+    at exports.getHeroes (src/unit-tests.ts:127041:53)
+    at src/unit-tests.ts:34179:26
+    at memoized (src/unit-tests.ts:34142:28)
+    at src/unit-tests.ts:34183:43
+    at MapSubscriber.memoized [as project] (src/unit-tests.ts:34142:28)
+    at MapSubscriber._next (src/unit-tests.ts:35608:35)
+    at MapSubscriber.Subscriber.next (src/unit-tests.ts:19986:18)
+    at State.BehaviorSubject._subscribe (src/unit-tests.ts:32989:24)
+    at State.Observable._trySubscribe (src/unit-tests.ts:20385:25)
+    at State.Subject._trySubscribe (src/unit-tests.ts:27434:51)
+    at State.Observable.subscribe (src/unit-tests.ts:20373:65)
+    at Store.Observable._subscribe (src/unit-tests.ts:20444:28)
+    at Store.Observable.subscribe (src/unit-tests.ts:20373:41)
+    at MapOperator.call (src/unit-tests.ts:35585:23)
+    at Store.Observable.subscribe (src/unit-tests.ts:20370:22)
+    at DistinctUntilChangedOperator.call (src/unit-tests.ts:35990:23)
+    at Store.Observable.subscribe (src/unit-tests.ts:20370:22)
+    at HeroesComponent.ngOnInit (src/unit-tests.ts:131409:51)
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:154823:23)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
+    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
+    at Zone.run (src/unit-tests.ts:127882:43)
+    at runInTestZone (src/unit-tests.ts:155165:34)
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
+    at Zone.runTask (src/unit-tests.ts:127932:47)
+    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
 
         </td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.019s</td>
+        <td>Passed in 0.028s</td>
+        <td>Should return the right conversion from meters to feet </td>
+        <td>HeroesComponent &raquo; heightConversion function</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.003s</td>
+        <td>should create a new Load Heroes action</td>
+        <td>Hero Actions can be created correctly &raquo; Load Heroes</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.005s</td>
+        <td>should create a new Load Hero Success action</td>
+        <td>Hero Actions can be created correctly &raquo; Load Heroes Success</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0s</td>
+        <td>should create a new Update Hero action</td>
+        <td>Hero Actions can be created correctly &raquo; Update Hero</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.013s</td>
         <td>should return a collection from LoadHeroesSuccess</td>
         <td>HeroEffects &raquo; loadHeroes$</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.001s</td>
+        <td>Passed in 0s</td>
         <td>Should update the state with all the heroes on the DB</td>
         <td>Hero Reducer &raquo; Action type LOAD_HEROES_SUCCESS </td>
       </tr>
@@ -455,35 +200,37 @@ drainMicroTaskQueue@src/unit-tests.ts:128339:25
         <td>Should update the actual state</td>
         <td>
           Hero Reducer &raquo; Action type UPDATE_HERO
-          <br />Expected 0 to equal 2.
-@src/unit-tests.ts:136762:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
+          <br />Expected $.length = 0 to equal 2.
+Expected $[0] = undefined to equal Object({ _name: 'Anthony Stark', _height: 6, _nickname: 'Iron Man', _picture: 'http://' }).
+Expected $[1] = undefined to equal Object({ _name: 'Bruce Wayne', _height: 5.8, _nickname: 'Batman', _picture: 'http://batmanimg' }).
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:136801:35)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
+    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
+    at Zone.run (src/unit-tests.ts:127882:43)
+    at runInTestZone (src/unit-tests.ts:155165:34)
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
+    at Zone.runTask (src/unit-tests.ts:127932:47)
+    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
 
           <br />Expected $.length = 0 to equal 2.
 Expected $[0] = undefined to equal Object({ _name: 'Anthony Stark', _height: 6, _nickname: 'Iron Man', _picture: 'http://' }).
 Expected $[1] = undefined to equal Object({ _name: 'Bruce Wayne', _height: 5.8, _nickname: 'Batman', _picture: 'http://batmanimg' }).
-@src/unit-tests.ts:136763:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:136808:35)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
+    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
+    at Zone.run (src/unit-tests.ts:127882:43)
+    at runInTestZone (src/unit-tests.ts:155165:34)
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
+    at Zone.runTask (src/unit-tests.ts:127932:47)
+    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
 
         </td>
       </tr>
@@ -493,34 +240,19 @@ drainMicroTaskQueue@src/unit-tests.ts:128339:25
         <td>
           HeroService &raquo; get all heroes
           <br />Expected undefined to equal 2.
-@src/unit-tests.ts:136670:77
-SafeSubscriber.prototype.__tryOrUnsub@src/unit-tests.ts:20135:13
-SafeSubscriber.prototype.next@src/unit-tests.ts:20082:17
-Subscriber.prototype._next@src/unit-tests.ts:20022:9
-Subscriber.prototype.next@src/unit-tests.ts:19986:13
-Subscriber.prototype._next@src/unit-tests.ts:20022:9
-Subscriber.prototype.next@src/unit-tests.ts:19986:13
-MapSubscriber.prototype._next@src/unit-tests.ts:35614:9
-Subscriber.prototype.next@src/unit-tests.ts:19986:13
-FilterSubscriber.prototype._next@src/unit-tests.ts:36133:13
-Subscriber.prototype.next@src/unit-tests.ts:19986:13
-MergeMapSubscriber.prototype.notifyNext@src/unit-tests.ts:35205:13
-InnerSubscriber.prototype._next@src/unit-tests.ts:131063:9
-Subscriber.prototype.next@src/unit-tests.ts:19986:13
-TestRequest.prototype.flush@src/unit-tests.ts:134673:13
-@src/unit-tests.ts:136676:13
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128132:17
-ProxyZoneSpec.prototype.onInvoke@src/unit-tests.ts:155320:20
-ZoneDelegate.prototype.invoke@src/unit-tests.ts:128131:17
-Zone.prototype.run@src/unit-tests.ts:127882:24
-runInTestZone@src/unit-tests.ts:155074:20
-wrapTestInZone/&lt;@src/unit-tests.ts:155089:20
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneQueueRunner.prototype.execute@src/unit-tests.ts:155179:17
-ZoneDelegate.prototype.invokeTask@src/unit-tests.ts:128165:17
-Zone.prototype.runTask@src/unit-tests.ts:127932:28
-drainMicroTaskQueue@src/unit-tests.ts:128339:25
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:136682:43)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
+    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
+    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
+    at Zone.run (src/unit-tests.ts:127882:43)
+    at runInTestZone (src/unit-tests.ts:155165:34)
+    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
+    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
+    at Zone.runTask (src/unit-tests.ts:127932:47)
+    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
 
         </td>
       </tr>
