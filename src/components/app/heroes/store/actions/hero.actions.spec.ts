@@ -1,4 +1,4 @@
-import * as HeroActions from './hero.actions';
+import * as HeroActions from '../actions/hero.actions';
 
 
 describe('Hero Actions can be created correctly', () => {

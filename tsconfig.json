@@ -19,7 +19,8 @@
         ],
         "types": [
             "node",
-            "jasmine"
+            "jasmine",
+            "webpack-env"
         ]
     },
     "awesomeTypeScriptLoaderOptions": {

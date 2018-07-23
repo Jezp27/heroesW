@@ -18,7 +18,6 @@ export class HeroesComponent implements OnInit {
         this.store.select(heroStore.getAllHeroes).subscribe(state => {
             this.heroes = state;
         });
-        //this.store.dispatch(new localStore.LoadHeroes());
     }
 
     heightConversion(height) {

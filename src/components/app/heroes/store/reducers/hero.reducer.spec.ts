@@ -1,4 +1,4 @@
-import * as HeroReducer from './hero.reducer';
+import * as HeroReducer from '../reducers/hero.reducer';
 import * as HeroActions from '../actions/hero.actions';
 
 describe('Hero Reducer', () =>{
@@ -79,42 +79,4 @@ describe('Hero Reducer', () =>{
       expect(newState.data).toEqual(heroesUpdated);
     });
   });
-
-  describe('Hero reducer selectors', () =>{
-    describe('getHeroes selector', () => {
-      it('should return heroes data', () =>{
-        const mockHeroes = 
-          [
-            {
-              _name: 'Anthony Stark',
-              _height: 6,
-              _nickname: 'Iron Man',
-              _picture: 'http://',
-            },
-            {
-              _name: 'Bruce Wayne',
-              _height: 4,
-              _nickname: 'Batman',
-              _picture: 'http://',
-            },
-          ];
-        
-        const initialState = HeroReducer.initialState;
-        const actualState = {...initialState, mockHeroes};
-        const data = HeroReducer.getHeroes(actualState);
-        
-        expect(data).toEqual(mockHeroes);
-      });
-    });
-
-    describe('updateHeroes selector', () => {
-      it('should return the updated data', () => {
-        
-      })
-    })
-
-  });
-
-
-
 });

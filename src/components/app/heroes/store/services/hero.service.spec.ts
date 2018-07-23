@@ -10,7 +10,7 @@ describe('HeroService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [HeroService],
-      imports: [ HttpClientTestingModule ]
+      imports: [HttpClientTestingModule]
     });
     httpClient = TestBed.get(HttpClient);
     httpTestingController = TestBed.get(HttpTestingController);
@@ -22,13 +22,13 @@ describe('HeroService', () => {
     httpTestingController.verify();
   });
 
-    // Service can be injected
-  it('should be created', inject([heroService], (service: HeroService) => {
+  // Service can be injected
+  /*it('should be created', inject([heroService], (service: HeroService) => {
     expect(service).toBeTruthy();
-  }));
+  }));*/
 
   describe('get all heroes', () => {
-    const heroes =  [
+    const heroes = [
       {
         _name: 'Anthony Stark',
         _height: 6,
@@ -46,7 +46,7 @@ describe('HeroService', () => {
     beforeEach(() => {
       heroService = TestBed.get(HeroService);
     });
-    
+
     it('should return the expected number of heroes', () => {
       heroService.getAllHeroes().subscribe(
         heroes => expect(heroes.lenght).toEqual(2),
@@ -54,12 +54,11 @@ describe('HeroService', () => {
 
       // HeroService should have made just one request to GET heroes from expected URL
       const mockRequest = httpTestingController.expectOne('https://udem.herokuapp.com/heroes');
-       // Assert that the request is a GET.
+      // Assert that the request is a GET.
       expect(mockRequest.request.method).toEqual('GET');
 
       //Respond with the mock competencies:  Observable to resolve
       mockRequest.flush(heroes);
     });
-  
-});
+  });
 });

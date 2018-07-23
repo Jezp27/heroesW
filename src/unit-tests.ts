@@ -1,4 +1,4 @@
-/*require('es6-shim');
+require('es6-shim');
 require('reflect-metadata');
 require('zone.js/dist/zone');
 require('zone.js/dist/long-stack-trace-zone');
@@ -10,7 +10,7 @@ require('zone.js/dist/jasmine-patch');
 
 const browserTesting = require('@angular/platform-browser-dynamic/testing');
 const coreTesting = require('@angular/core/testing');
-const context = require.context('./src/', true, /\.spec\.ts$/);
+const context = require.context('./', true, /\.spec\.ts$/);
 
 Error.stackTraceLimit = Infinity;
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 2000;
@@ -21,22 +21,4 @@ coreTesting.TestBed.initTestEnvironment(
   browserTesting.platformBrowserDynamicTesting()
 );
 
-context.keys().forEach(context);*/
-
-// This file is required by karma.conf.js and loads recursively all the .spec and framework files
-
-import 'zone.js/dist/zone-testing';
-import { getTestBed } from '@angular/core/testing';
-import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
-
-declare const require: any;
-
-// First, initialize the Angular testing environment.
-getTestBed().initTestEnvironment(
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting()
-);
-// Then we find all the tests.
-const context = require.context('./', true, /\.spec\.ts$/);
-// And load the modules.
-context.keys().map(context);
+context.keys().forEach(context);

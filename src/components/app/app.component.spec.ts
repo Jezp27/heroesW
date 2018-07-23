@@ -5,6 +5,8 @@ import * as heroStore from '../app/heroes/store';
 import { HeroService } from './heroes/store/services/hero.service';
 import { HeroEffects } from '../app/heroes/store/effects/hero.effect';
 import { EffectsModule } from '@ngrx/effects';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('appComponent', () => {
   let component: AppComponent;
@@ -18,7 +20,9 @@ describe('appComponent', () => {
         StoreModule.forRoot({
           ...heroStore.reducers,
         }),
-        EffectsModule.forRoot([HeroEffects])
+        EffectsModule.forRoot([HeroEffects]),
+        RouterTestingModule,
+        HttpClientModule
       ],
       declarations: [AppComponent],
       providers:[
@@ -40,6 +44,7 @@ describe('appComponent', () => {
   
   it('Should dispatch the LoadHeroes action when created', () => {
     const action = new heroStore.LoadHeroes();
+    component.ngOnInit();
     expect(store.dispatch).toHaveBeenCalledWith(action);
   });
 });

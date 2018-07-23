@@ -2,6 +2,9 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { EditHeroComponent } from './edit-hero.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HeroesComponent } from '../heroes.component';
 
 describe('EditHeroComponent', ()=> {
   let component: EditHeroComponent;
@@ -11,6 +14,8 @@ describe('EditHeroComponent', ()=> {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [EditHeroComponent],
+      imports: [FormsModule, 
+        RouterTestingModule.withRoutes([{ path: ':nickname', component: EditHeroComponent },])],
       providers: [
         { provide: Router, useValue: router },
       ],
@@ -37,7 +42,7 @@ describe('EditHeroComponent', ()=> {
   });
 
   describe('GoBack function', () => {
-    it('Function calls route.navigete() method', ()=>{
+    it('Function calls route.navigate() method', ()=>{
       component.goBack();
       expect(router.navigate).toHaveBeenCalled();
     });

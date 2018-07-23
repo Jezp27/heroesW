@@ -10,12 +10,10 @@ export const initialState: HeroState = {
 
 export function reducer(state = initialState, action: HeroActions.Actions): HeroState {
   let data;
-  console.log('switch');
   switch(action.type) {   
     
     case HeroActions.LOAD_HEROES_SUCCESS:
       data = action.payload;
-      console.log("reducerload");
       return {...state, data};
     
     case HeroActions.UPDATE_HERO:
@@ -29,12 +27,9 @@ export function reducer(state = initialState, action: HeroActions.Actions): Hero
         }
       }
       data = newState;
-      console.log("reducer update");
       return {...state, data};
 
     default:
-    console.log("default");
-    console.log(action.type);
       return state;
   }
 }
