@@ -33,7 +33,6 @@ export class EditHeroComponent implements OnInit  {
     }
 
     updateHero(){
-        console.log("update");
         this.store.dispatch(new HeroActions.UpdateHero(this.hero));
     }
 }

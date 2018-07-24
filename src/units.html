@@ -13,15 +13,15 @@
         <td colspan="3" title="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36">Browser: Chrome 67.0.3396 (Windows 10 0.0.0)</td>
       </tr>
       <tr class="overview">
-        <td colspan="3">Timestamp: 2018-7-23 17:28:44</td>
+        <td colspan="3">Timestamp: 2018-7-24 10:59:56</td>
       </tr>
       <tr>
         <td colspan="3">
-          13 tests / 
+          14 tests / 
           0 errors / 
-          5 failures / 
+          0 failures / 
           0 skipped / 
-          runtime: 0.273s
+          runtime: 0.461s
         </td>
       </tr>
       <tr class="header">
@@ -30,153 +30,47 @@
         <td>Suite / Results</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.055s</td>
+        <td>Passed in 0.096s</td>
         <td>should be created</td>
         <td>appComponent</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.022s</td>
+        <td>Passed in 0.021s</td>
         <td>Should dispatch the LoadHeroes action when created</td>
         <td>appComponent</td>
       </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>should tell router to navigate when Regresar is clicked</td>
-        <td>
-          EditHeroComponent &raquo; GoBack function
-          <br />Error: StaticInjectorError(DynamicTestModule)[EditHeroComponent -&gt; Store]: 
-  StaticInjectorError(Platform: core)[EditHeroComponent -&gt; Store]: 
-    NullInjectorError: No provider for Store!
-    at _NullInjector.get (src/unit-tests.ts:1315:19)
-    at resolveToken (src/unit-tests.ts:1613:24)
-    at tryResolveToken (src/unit-tests.ts:1555:16)
-    at StaticInjector.get (src/unit-tests.ts:1423:20)
-    at resolveToken (src/unit-tests.ts:1613:24)
-    at tryResolveToken (src/unit-tests.ts:1555:16)
-    at StaticInjector.get (src/unit-tests.ts:1423:20)
-    at resolveNgModuleDep (src/unit-tests.ts:11208:25)
-    at NgModuleRef_.get (src/unit-tests.ts:12441:16)
-    at resolveDep (src/unit-tests.ts:12931:45)
-    at createClass (src/unit-tests.ts:12801:32)
-    at createDirectiveInstance (src/unit-tests.ts:12638:37)
-    at createViewNodes (src/unit-tests.ts:14096:53)
-    at createRootView (src/unit-tests.ts:13985:5)
-    at callWithDebugContext (src/unit-tests.ts:15410:42)
-    at Object.debugCreateRootView [as createRootView] (src/unit-tests.ts:14693:12)
-    at ComponentFactory_.create (src/unit-tests.ts:11590:46)
-    at initComponent (src/unit-tests.ts:132606:49)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
-    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
-    at Object.onInvoke (src/unit-tests.ts:5072:33)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
-    at Zone.run (src/unit-tests.ts:127882:43)
-    at NgZone.run (src/unit-tests.ts:4889:69)
-    at TestBed.createComponent (src/unit-tests.ts:132609:58)
-    at Function.TestBed.createComponent (src/unit-tests.ts:132293:29)
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:154863:37)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
-    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
-    at Zone.run (src/unit-tests.ts:127882:43)
-    at runInTestZone (src/unit-tests.ts:155165:34)
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
-    at Zone.runTask (src/unit-tests.ts:127932:47)
-    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
-
-          <br />TypeError: Cannot read property 'goBack' of undefined
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:154869:23)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
-    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
-    at Zone.run (src/unit-tests.ts:127882:43)
-    at runInTestZone (src/unit-tests.ts:155165:34)
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
-    at Zone.runTask (src/unit-tests.ts:127932:47)
-    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
-
-        </td>
-      </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>Should call getAllHeroes action</td>
-        <td>
-          HeroesComponent &raquo; Should select the getAllHeroes action
-          <br />TypeError: Cannot set property 'state' of undefined
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:154818:31)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
-    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
-    at Zone.run (src/unit-tests.ts:127882:43)
-    at runInTestZone (src/unit-tests.ts:155165:34)
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
-    at Zone.runTask (src/unit-tests.ts:127932:47)
-    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
-
-        </td>
-      </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>Should populate Heroes array with the right data</td>
-        <td>
-          HeroesComponent &raquo; Should select the getAllHeroes action
-          <br />TypeError: Cannot read property 'data' of undefined
-    at exports.getHeroes (src/unit-tests.ts:127041:53)
-    at src/unit-tests.ts:34179:26
-    at memoized (src/unit-tests.ts:34142:28)
-    at src/unit-tests.ts:34183:43
-    at MapSubscriber.memoized [as project] (src/unit-tests.ts:34142:28)
-    at MapSubscriber._next (src/unit-tests.ts:35608:35)
-    at MapSubscriber.Subscriber.next (src/unit-tests.ts:19986:18)
-    at State.BehaviorSubject._subscribe (src/unit-tests.ts:32989:24)
-    at State.Observable._trySubscribe (src/unit-tests.ts:20385:25)
-    at State.Subject._trySubscribe (src/unit-tests.ts:27434:51)
-    at State.Observable.subscribe (src/unit-tests.ts:20373:65)
-    at Store.Observable._subscribe (src/unit-tests.ts:20444:28)
-    at Store.Observable.subscribe (src/unit-tests.ts:20373:41)
-    at MapOperator.call (src/unit-tests.ts:35585:23)
-    at Store.Observable.subscribe (src/unit-tests.ts:20370:22)
-    at DistinctUntilChangedOperator.call (src/unit-tests.ts:35990:23)
-    at Store.Observable.subscribe (src/unit-tests.ts:20370:22)
-    at HeroesComponent.ngOnInit (src/unit-tests.ts:131409:51)
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:154823:23)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
-    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
-    at Zone.run (src/unit-tests.ts:127882:43)
-    at runInTestZone (src/unit-tests.ts:155165:34)
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
-    at Zone.runTask (src/unit-tests.ts:127932:47)
-    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
-
-        </td>
+      <tr class="pass">
+        <td>Passed in 0.122s</td>
+        <td>goBack() function should redirect to the initial page</td>
+        <td>EditHeroComponent</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.028s</td>
+        <td>Passed in 0.072s</td>
+        <td>Should dispatch the UpdateHeroes action when a hero is updated</td>
+        <td>EditHeroComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.076s</td>
+        <td>Should initialize the Hero object</td>
+        <td>EditHeroComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.027s</td>
+        <td>Should populate Heroes array with the right data</td>
+        <td>HeroesComponent &raquo; Should select getAllHeroes</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.023s</td>
         <td>Should return the right conversion from meters to feet </td>
         <td>HeroesComponent &raquo; heightConversion function</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.003s</td>
+        <td>Passed in 0s</td>
         <td>should create a new Load Heroes action</td>
         <td>Hero Actions can be created correctly &raquo; Load Heroes</td>
       </tr>
       <tr class="pass">
-        <td>Passed in 0.005s</td>
+        <td>Passed in 0.001s</td>
         <td>should create a new Load Hero Success action</td>
         <td>Hero Actions can be created correctly &raquo; Load Heroes Success</td>
       </tr>
@@ -195,66 +89,15 @@
         <td>Should update the state with all the heroes on the DB</td>
         <td>Hero Reducer &raquo; Action type LOAD_HEROES_SUCCESS </td>
       </tr>
-      <tr class="fail">
-        <td>Failed</td>
+      <tr class="pass">
+        <td>Passed in 0s</td>
         <td>Should update the actual state</td>
-        <td>
-          Hero Reducer &raquo; Action type UPDATE_HERO
-          <br />Expected $.length = 0 to equal 2.
-Expected $[0] = undefined to equal Object({ _name: 'Anthony Stark', _height: 6, _nickname: 'Iron Man', _picture: 'http://' }).
-Expected $[1] = undefined to equal Object({ _name: 'Bruce Wayne', _height: 5.8, _nickname: 'Batman', _picture: 'http://batmanimg' }).
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:136801:35)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
-    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
-    at Zone.run (src/unit-tests.ts:127882:43)
-    at runInTestZone (src/unit-tests.ts:155165:34)
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
-    at Zone.runTask (src/unit-tests.ts:127932:47)
-    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
-
-          <br />Expected $.length = 0 to equal 2.
-Expected $[0] = undefined to equal Object({ _name: 'Anthony Stark', _height: 6, _nickname: 'Iron Man', _picture: 'http://' }).
-Expected $[1] = undefined to equal Object({ _name: 'Bruce Wayne', _height: 5.8, _nickname: 'Batman', _picture: 'http://batmanimg' }).
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:136808:35)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
-    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
-    at Zone.run (src/unit-tests.ts:127882:43)
-    at runInTestZone (src/unit-tests.ts:155165:34)
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
-    at Zone.runTask (src/unit-tests.ts:127932:47)
-    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
-
-        </td>
+        <td>Hero Reducer &raquo; Action type UPDATE_HERO</td>
       </tr>
-      <tr class="fail">
-        <td>Failed</td>
-        <td>should return the expected number of heroes</td>
-        <td>
-          HeroService &raquo; get all heroes
-          <br />Expected undefined to equal 2.
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:136682:43)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128132:26)
-    at ProxyZoneSpec.onInvoke (src/unit-tests.ts:155411:39)
-    at ZoneDelegate.invoke (src/unit-tests.ts:128131:32)
-    at Zone.run (src/unit-tests.ts:127882:43)
-    at runInTestZone (src/unit-tests.ts:155165:34)
-    at UserContext.&lt;anonymous&gt; (src/unit-tests.ts:155180:20)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneQueueRunner.jasmine.QueueRunner.ZoneQueueRunner.execute (src/unit-tests.ts:155270:42)
-    at ZoneDelegate.invokeTask (src/unit-tests.ts:128165:31)
-    at Zone.runTask (src/unit-tests.ts:127932:47)
-    at drainMicroTaskQueue (src/unit-tests.ts:128339:35)
-
-        </td>
+      <tr class="pass">
+        <td>Passed in 0.01s</td>
+        <td>should return the expected heroes</td>
+        <td>HeroService &raquo; get all heroes</td>
       </tr>
     </table>
     <hr/>
