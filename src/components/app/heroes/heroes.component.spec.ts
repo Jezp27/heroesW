@@ -7,7 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { HeroService } from './store/services/hero.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientModule } from '@angular/common/http';
-import * as HeroReducer  from './store/reducers/hero.reducer';
+import * as HeroReducer from './store/reducers/hero.reducer';
 import { Observable } from 'rxjs';
 
 describe('HeroesComponent', () => {
@@ -41,20 +41,20 @@ describe('HeroesComponent', () => {
         HttpClientModule
       ],
       declarations: [HeroesComponent],
-      providers:[
+      providers: [
         HeroService,
       ],
     });
 
-    fixture= TestBed.createComponent(HeroesComponent);
-    component= fixture.componentInstance;
-    store= TestBed.get(Store);
-    
-    const heroState: HeroReducer.HeroState = {data: heroes};
+    fixture = TestBed.createComponent(HeroesComponent);
+    component = fixture.componentInstance;
+    store = TestBed.get(Store);
+
+    const heroState: HeroReducer.HeroState = { data: heroes };
     spyOn(store, 'select').and.returnValue(Observable.of(heroState.data));
   });
 
-  describe('Should select getAllHeroes', () =>{
+  describe('Should select getAllHeroes', () => {
     it('Should populate Heroes array with the right data', () => {
       component.ngOnInit();
       expect((component.heroes).length).toEqual(2);

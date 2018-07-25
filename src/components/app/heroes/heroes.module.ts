@@ -6,20 +6,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { HeroesComponent } from './heroes.component';
-import { EditHeroComponent} from './edit-heroes/edit-hero.component';
-import { HeroService} from './store/services/hero.service';
-import { reducers} from './store';
+import { EditHeroComponent } from './edit-heroes/edit-hero.component';
+import { HeroService } from './store/services/hero.service';
+import { reducers } from './store';
 import { HeroEffects } from './store/effects/hero.effect';
 import { FormsModule } from '../../../../node_modules/@angular/forms';
 
 export const routes: Routes = [{ path: '', component: HeroesComponent },
-                              { path: 'heroes', component: HeroesComponent },
-                              { path: ':nickname', component: EditHeroComponent },
-                            ];
+{ path: 'heroes', component: HeroesComponent },
+{ path: ':nickname', component: EditHeroComponent }];
 
 @NgModule({
   declarations: [
-    HeroesComponent, 
+    HeroesComponent,
     EditHeroComponent
   ],
   imports: [
@@ -34,4 +33,5 @@ export const routes: Routes = [{ path: '', component: HeroesComponent },
   exports: [HeroesComponent, EditHeroComponent],
   providers: [HeroService],
 })
+
 export class HeroesModule { }

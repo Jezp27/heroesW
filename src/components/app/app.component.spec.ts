@@ -14,7 +14,7 @@ describe('appComponent', () => {
   let store: Store<heroStore.HeroState>;
 
 
-  beforeEach(() =>{
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
         StoreModule.forRoot({
@@ -25,7 +25,7 @@ describe('appComponent', () => {
         HttpClientModule
       ],
       declarations: [AppComponent],
-      providers:[
+      providers: [
         HeroService,
       ],
     });
@@ -41,7 +41,7 @@ describe('appComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
-  
+
   it('Should dispatch the LoadHeroes action when created', () => {
     const action = new heroStore.LoadHeroes();
     component.ngOnInit();

@@ -5,16 +5,17 @@ import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { StoreModule, MetaReducer, ReducerObservable } from '@ngrx/store';
+import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { reducers } from './heroes/store';
 import { HeroEffects } from '../app/heroes/store/effects/hero.effect';
 import { HeroService } from './heroes/store/services/hero.service';
 
-export const routes: Routes =[
-  { path: '', pathMatch: 'full', redirectTo: 'heroes'},
-  { path:'heroes', loadChildren: './heroes/heroes.module#HeroesModule'}
+
+export const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'heroes' },
+  { path: 'heroes', loadChildren: './heroes/heroes.module#HeroesModule' }
 ];
 
 @NgModule({
@@ -26,7 +27,7 @@ export const routes: Routes =[
     FormsModule,
     HttpModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),   
+    RouterModule.forRoot(routes),
     FlexLayoutModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([HeroEffects])

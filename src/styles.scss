@@ -1,19 +1,21 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Raleway:400,700');
 @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+
 
 $background: url(../../assets/img/HeroesBackground.jpg); 
 
 //fonts
 $font: 'Nanum Gothic', sans-serif;  
-$roboto-slab: 'Roboto Slab', serif;   
-$open-sans: 'Open Sans', sans-serif;
 $font-title: 'Black Han Sans', sans-serif;
 $font-size: 14px;
+$font-edit: 'Carter One', sans-serif;
 
 //colors
-$red_color: rgba(206, 10, 10, 0.7);
-$transparent_white: rgba(255, 255, 255, 0.7);
+$red_color: rgba(239, 28, 28, 0.719);
+$title_color: rgb(239, 28, 28);
+$body_color: rgb(104, 100, 100);
+$transparent_white: rgba(255, 255, 255, 0.8);
 $shadow_color: #6b6a6a;
 
 
@@ -45,9 +47,11 @@ $prefixes: "webkit", "moz", "ms", "o", "none";
   display: flex;
   flex-wrap:wrap;
   background-color: $transparent_white;
-  border-radius: 2em;
-  margin-top: 6%;
-  margin-inline-start: 2%;
-  margin-inline-end: 2%;
+  border-radius: 1em;
+  margin-top: 10%;
+  margin-left: 4%;
+  margin-right: 4%;
+  padding-top: 20px;
+  padding-bottom: 30px;
   justify-content: space-around;
 }

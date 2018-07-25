@@ -4,49 +4,53 @@ $soft_white:  rgba(255, 255, 255, 0.753);
 $text_color: rgb(71, 68, 68);
 $border: 2px;
 
-input{
-    font-family: $font;
-    font-size:100%;
-    border-bottom-color: $red_color;
-}
-
-h2{
-    color: $red_color;
-    font-family: $font-title;
-}
-
-img{
-    @include prefix(box-shadow, 2px 2px 2px $shadow_color);
-}
-
 .flex-container {
   @extend %principal-container;
   .content{
-    @include prefix(padding, 10px); 
-    @include prefix(margin, 10px);    
-    font-family: $font-title; 
+    padding: 10px; 
+    margin: 10px;    
+    font-family: $font-edit; 
     width: 100%;
     text-align: center;
-      .form{
-        max-width: 500px;
-        padding: 40px;
-        margin: auto;
-        background-color: $soft_white;
-        @include prefix(box-shadow, 2px 2px 2px $shadow_color);
+    .form{
+      max-width: 500px;
+      padding: 40px;
+      margin: auto;
+      background-color: $soft_white;
+      box-shadow: 2px 2px 2px $shadow_color;  
+          
+      img{
+        box-shadow: 2px 2px 2px $shadow_color;
+        width: 150px;
+      }
+
+      h2{
+        font-family: $font-edit;
+        font-size: 30px;
+        color: $red_color;
+      }
+     
+      input{
+        font-family: $font;
+        width:90%;
+        font-size:100%;
+        border: 2px solid #ea5455;
+        text-align: center;
       }
     }
   }
+}
 
 button{
-    background: $red_color;
-    border-radius: 1px;
-    border: $border solid white;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: $font;
-    font-size: 16px;
-    padding: 15px;
-    @include prefix(transition, all .3s ease);   
+  background: $red_color;
+  border-radius: 1px;
+  border: $border solid white;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-edit;
+  font-size: 16px;
+  padding: 15px;
 }
+  
 

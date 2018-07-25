@@ -1,5 +1,6 @@
 <div class="flex-container">
-    <div class="content">
+    <button class="return" (click)="goBack()"><i class="fa fa-home"></i> Regresar</button>
+    <div class="content">    
         <form class="form">
             <h2>{{hero._nickname}}</h2>
             <img src={{hero._picture}}>
@@ -39,6 +40,5 @@
             </fieldset>
         </form>
         <br>
-        <button class="return" (click)="goBack()">Regresar</button>
     </div>
 </div>

@@ -5,7 +5,7 @@ import * as heroStore from '../store';
 import * as HeroActions from '../store/actions/hero.actions';
 import { Hero } from '../models/hero.model';
 import { Store } from '../../../../../node_modules/@ngrx/store';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -14,25 +14,25 @@ import {Router} from "@angular/router";
     styleUrls: ['./edit-hero.component.scss']
 })
 
-export class EditHeroComponent implements OnInit  {
-    hero : Hero;
-    constructor(private location: Location, private route: ActivatedRoute, private store: Store<heroStore.HeroState>, private router: Router){}
-     
-    ngOnInit(){
-        this.store.select(heroStore.getAllHeroes).subscribe(state =>{
-            this.hero= state.find(hero => hero._nickname === this.interceptNickname());
-      });
+export class EditHeroComponent implements OnInit {
+    hero: Hero;
+    constructor(private location: Location, private route: ActivatedRoute, private store: Store<heroStore.HeroState>, private router: Router) { }
+
+    ngOnInit() {
+        this.store.select(heroStore.getAllHeroes).subscribe(state => {
+            this.hero = state.find(hero => hero._nickname === this.interceptNickname());
+        });
     }
 
     interceptNickname() {
         return this.route.snapshot.paramMap.get('nickname');
-    } 
+    }
 
     goBack(): void {
         this.router.navigate(['']);
     }
 
-    updateHero(){
+    updateHero() {
         this.store.dispatch(new HeroActions.UpdateHero(this.hero));
     }
 }

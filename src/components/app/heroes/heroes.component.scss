@@ -1,11 +1,15 @@
 @import 'src/styles.scss';
 
 b{
-  color: $red_color;
-  font-size: 20px;
+  color: $title_color;
+  font-size: 25px;
+  font-weight: bolder;
 }
 
-
+p{
+  color: $body_color;
+  font-size: 15px;
+}
 
 .flex-container{
   @extend %principal-container;
@@ -16,7 +20,7 @@ b{
   background-color: white;
   border-radius: 1em;
   margin: 10px;
-  @include prefix(box-shadow, 1px 1px 3px $shadow_color);
+  box-shadow: 1px 1px 3px $shadow_color;
   @media(min-width: $break-small){
     flex-basis: 100%;
     img{
@@ -32,21 +36,19 @@ b{
       max-width:100px; 
     }
   }
-}
-
-.sub-item {
+  .sub-item {
   display: inline-flex;
   font-family: $font;
   font-size: $font-size;
   padding: 5px;
-  margin: 8px;
-}  
-  
-.hero_position {
-  position: relative;
-  :hover{
-    cursor: pointer;
+  margin-left: 25px;
+  .hero_position {
+    position: relative;
+    :hover{
+      cursor: pointer;
+    }
   }
+  } 
 }
 
 .red_circle{
@@ -64,7 +66,8 @@ b{
   color: white;
   font-size: $font-size;
   font-family: $font;
-  @include prefix(box-shadow, 2px 2px 2px $shadow_color);
+  font-weight: bold;
+  box-shadow: 2px 2px 2px $shadow_color;
 }
  
 img{

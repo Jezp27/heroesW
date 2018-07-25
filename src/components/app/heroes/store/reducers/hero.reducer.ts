@@ -37,4 +37,3 @@ export function reducer(state = initialState, action: HeroActions.Actions): Hero
 // Allows to access interface properties (level states)
 // Functions to compose with the selectors
 export const getHeroes = (state: HeroState) => state.data; 
-export const updateHero= (state: HeroState) => state.data;
