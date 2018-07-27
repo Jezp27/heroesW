@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { reducers } from './heroes/store';
 import { HeroEffects } from '../app/heroes/store/effects/hero.effect';
 import { HeroService } from './heroes/store/services/hero.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 export const routes: Routes = [
@@ -30,7 +31,8 @@ export const routes: Routes = [
     RouterModule.forRoot(routes),
     FlexLayoutModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([HeroEffects])
+    EffectsModule.forRoot([HeroEffects]),
+    NgbModule.forRoot()
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]

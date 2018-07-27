@@ -11,6 +11,7 @@ import { HeroService } from './store/services/hero.service';
 import { reducers } from './store';
 import { HeroEffects } from './store/effects/hero.effect';
 import { FormsModule } from '../../../../node_modules/@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export const routes: Routes = [{ path: '', component: HeroesComponent },
 { path: 'heroes', component: HeroesComponent },
@@ -29,6 +30,7 @@ export const routes: Routes = [{ path: '', component: HeroesComponent },
     RouterModule.forChild(routes),
     StoreModule.forFeature('heroes', reducers),
     EffectsModule.forFeature([HeroEffects]),
+    NgbModule
   ],
   exports: [HeroesComponent, EditHeroComponent],
   providers: [HeroService],

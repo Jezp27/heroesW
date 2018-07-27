@@ -17,16 +17,18 @@ describe('HeroesComponent', () => {
 
   const heroes = [
     {
-      _name: 'Anthony Stark',
-      _height: 6,
-      _nickname: 'Iron Man',
-      _picture: 'http://',
+      id: 0,
+      name: 'Anthony Stark',
+      height: 6,
+      nickname: 'Iron Man',
+      picture: 'http://',
     },
     {
-      _name: 'Bruce Wayne',
-      _height: 4,
-      _nickname: 'Batman',
-      _picture: 'http://',
+      id: 1,
+      name: 'Bruce Wayne',
+      height: 4,
+      nickname: 'Batman',
+      picture: 'http://',
     },
   ];
 

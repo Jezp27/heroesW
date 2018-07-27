@@ -1,8 +1,13 @@
+<div class="search">
+  <label>Buscar Heroe:  </label>
+  <br>
+  <input #search type="text" [ngbTypeahead]="search"  name="search" />
+</div>
 <div class="flex-container">
   <div class="container-item" *ngFor="let hero of heroes; let i=index" [ngSwitch]='i'>
     <div class="sub-item">
       <div class="hero_position">
-        <img src="{{hero._picture}}" routerLink="/heroes/{{hero._nickname}}">
+        <img src="{{hero.picture}}" routerLink="/heroes/{{hero.nickname}}">
         <div class="red_circle" *ngSwitchCase='0'>{{i+1}}st</div>
         <div class="red_circle" *ngSwitchCase='1'>{{i+1}}nd</div>
         <div class="red_circle" *ngSwitchCase='2'>{{i+1}}rd</div>
@@ -11,9 +16,9 @@
     </div>
     <div class="sub-item">
       <p align="left">
-        <b>{{hero._nickname}}</b>
-        <br> {{hero._name}}
-        <br> Estatura: {{heightConversion(hero._height)}} mt</p>
+        <b>{{hero.nickname}}</b>
+        <br> {{hero.name}}
+        <br> Estatura: {{heightConversion(hero.height)}} mt</p>
     </div>
   </div>
 </div>

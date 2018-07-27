@@ -20,7 +20,7 @@ export function reducer(state = initialState, action: HeroActions.Actions): Hero
       const heroUpdated = action.payload;
       let newState: any[] =[];
       for (var hero of state.data){
-        if (hero._nickname == heroUpdated._nickname){
+        if (hero.nickname == heroUpdated.nickname){
           newState.push(heroUpdated); 
         }else{
           newState.push(hero);

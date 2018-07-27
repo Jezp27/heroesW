@@ -3,35 +3,35 @@
     <div class="content">    
         <form class="form">
             <h2>{{hero._nickname}}</h2>
-            <img src={{hero._picture}}>
+            <img src={{hero.picture}}>
             <br>
             <br>
             <fieldset>
                 <div>
                     <label for="name">Nombre Completo:</label>
                     <br>
-                    <input [(ngModel)]="hero._name" type="text" name="name" required/>
+                    <input [(ngModel)]="hero.name" type="text" name="name" required/>
                     <br>
                     <br>
                 </div>
                 <div>
                     <label for="nickname">Alias:</label>
                     <br>
-                    <input [(ngModel)]="hero._nickname" type="text" name="nickname" required disabled/>
+                    <input [(ngModel)]="hero.nickname" type="text" name="nickname" required disabled/>
                     <br>
                     <br>
                 </div>
                 <div>
                     <label for="height">Estatura: (en ft)</label>
                     <br>
-                    <input [(ngModel)]="hero._height" name="height" required/>
+                    <input [(ngModel)]="hero.height" name="height" required/>
                     <br>
                     <br>
                 </div>
                 <div>
                     <label for="picture"> Link Imagen de Perfil:</label>
                     <br>
-                    <input [(ngModel)]="hero._picture" type="url" name="picture" required pattern="(http|https)://.+">
+                    <input [(ngModel)]="hero.picture" type="url" name="picture" required pattern="(http|https)://.+">
                     <br>
                     <br>
                 </div>

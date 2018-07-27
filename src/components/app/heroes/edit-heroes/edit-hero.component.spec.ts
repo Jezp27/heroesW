@@ -20,24 +20,27 @@ describe('EditHeroComponent', () => {
   let store: Store<heroStore.HeroState>;
   const heroToUpdate =
   {
-    _name: 'Bruce Wayne',
-    _height: 5.8,
-    _nickname: 'Batman',
-    _picture: 'http://batmanimg',
+    id: 1,
+    name: 'Bruce Wayne',
+    height: 5.8,
+    nickname: 'Batman',
+    picture: 'http://batmanimg',
   };
 
   const heroes = [
     {
-      _name: 'Anthony Stark',
-      _height: 6,
-      _nickname: 'Iron Man',
-      _picture: 'http://',
+      id: 0,
+      name: 'Anthony Stark',
+      height: 6,
+      nickname: 'Iron Man',
+      picture: 'http://',
     },
     {
-      _name: 'Bruce Wayne',
-      _height: 4,
-      _nickname: 'Batman',
-      _picture: 'http://',
+      id: 1,
+      name: 'Bruce Wayne',
+      height: 4,
+      nickname: 'Batman',
+      picture: 'http://',
     },
   ];
 
