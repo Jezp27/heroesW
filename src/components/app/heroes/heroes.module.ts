@@ -15,7 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export const routes: Routes = [{ path: '', component: HeroesComponent },
 { path: 'heroes', component: HeroesComponent },
-{ path: ':nickname', component: EditHeroComponent }];
+{ path: ':id', component: EditHeroComponent }];
 
 @NgModule({
   declarations: [

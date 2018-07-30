@@ -5,8 +5,6 @@ import { Hero } from '../heroes/models/hero.model';
 import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, timestamp } from 'rxjs/operators';
 
-const ok: {name: string, id:string}[]= [{name: 'juan', id: '1'}, {name: 'juan2jhgjuyfg', id: '2'}];
-
 @Component({
     selector: 'app-heroes',
     templateUrl: './heroes.component.html',

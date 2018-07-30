@@ -1,4 +1,4 @@
-export interface Hero1 {
+export interface originalHero {
   _name: string;
   _height: number;
   _picture: string;

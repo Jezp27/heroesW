@@ -5,27 +5,41 @@ describe('Hero Reducer', () =>{
   const mockHeroes = 
         [
           {
-            _name: 'Anthony Stark',
-            _height: 6,
-            _nickname: 'Iron Man',
-            _picture: 'http://',
+            id: 0,
+            name: 'Anthony Stark',
+            height: 6,
+            nickname: 'Iron Man',
+            picture: 'http://',
           },
           {
-            _name: 'Bruce Wayne',
-            _height: 4,
-            _nickname: 'Batman',
-            _picture: 'http://',
+            id: 1,
+            name: 'Bruce Wayne',
+            height: 4,
+            nickname: 'Batman',
+            picture: 'http://',
           },
         ];
+    
+  const mockHero =
+        [
+          {
+            id: 1,
+            name: 'Bruce Wayne',
+            height: 4,
+            nickname: 'Batman',
+            picture: 'http://',
+          },  
+        ];
+
 
   describe('Action type LOAD_HEROES_SUCCESS ', () =>{
     it('Should update the state with all the heroes on the DB', () => {
       
       const initialState = HeroReducer.initialState;
-      const action = new HeroActions.LoadHeroesSuccess(mockHeroes);
+      const action = new HeroActions.LoadHeroesSuccess(mockHeroes[1]);
       const state = HeroReducer.reducer(initialState, action );
 
-      expect(state.data).toEqual(mockHeroes);
+      expect(state.data).toEqual(mockHero);
     });
   });
 
@@ -33,26 +47,29 @@ describe('Hero Reducer', () =>{
     it('Should update the actual state', () => {
       const heroToUpdate = 
         {
-          _name: 'Bruce Wayne',
-          _height: 5.8,
-          _nickname: 'Batman',
-          _picture: 'http://batmanimg',
+          id: 1,
+          name: 'Bruce Wayne',
+          height: 5.8,
+          nickname: 'Batman',
+          picture: 'http://batmanimg',
         };
 
       const heroesUpdated = 
         [
           {
-            _name: 'Anthony Stark',
-            _height: 6,
-            _nickname: 'Iron Man',
-            _picture: 'http://',
+            id: 0,
+            name: 'Anthony Stark',
+            height: 6,
+            nickname: 'Iron Man',
+            picture: 'http://',
           },
           {
-            _name: 'Bruce Wayne',
-            _height: 5.8,
-            _nickname: 'Batman',
-            _picture: 'http://batmanimg',
-          }
+            id: 1,
+            name: 'Bruce Wayne',
+            height: 5.8,
+            nickname: 'Batman',
+            picture: 'http://batmanimg',
+          },
         ];
 
       const previousState: HeroReducer.HeroState = {data: mockHeroes};

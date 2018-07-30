@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as heroStore from '../app/heroes/store';
 import { Observable } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
+import { sample } from 'rxjs/operators';
+import { interval } from 'rxjs/observable/interval';
 
 @Component({
     selector: 'app-root',
@@ -19,8 +20,7 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this.store.dispatch(new heroStore.LoadHeroes());
         Observable.fromEvent(document, 'mousemove').pipe(
-            debounceTime(2000),
-            //timestamp()
+            sample(interval(2000)),
         ).subscribe((event: MouseEvent) =>{
             this.coordenadaX = event.clientX;
             this.coordenadaY = event.clientY;

@@ -7,7 +7,7 @@
   <div class="container-item" *ngFor="let hero of heroes; let i=index" [ngSwitch]='i'>
     <div class="sub-item">
       <div class="hero_position">
-        <img src="{{hero.picture}}" routerLink="/heroes/{{hero.nickname}}">
+        <img src="{{hero.picture}}" routerLink="/heroes/{{hero.id}}">
         <div class="red_circle" *ngSwitchCase='0'>{{i+1}}st</div>
         <div class="red_circle" *ngSwitchCase='1'>{{i+1}}nd</div>
         <div class="red_circle" *ngSwitchCase='2'>{{i+1}}rd</div>

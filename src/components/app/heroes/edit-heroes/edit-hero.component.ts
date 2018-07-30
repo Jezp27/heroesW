@@ -20,12 +20,12 @@ export class EditHeroComponent implements OnInit {
 
     ngOnInit() {
         this.store.select(heroStore.getAllHeroes).subscribe(state => {
-            this.hero = state.find(hero => hero.nickname === this.interceptNickname());
+            this.hero = state.find(hero => hero.id == this.interceptId());
         });
     }
 
-    interceptNickname() {
-        return this.route.snapshot.paramMap.get('nickname');
+    interceptId() {
+        return this.route.snapshot.paramMap.get('id');
     }
 
     goBack(): void {

@@ -1,13 +1,10 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-
 import { Actions } from '@ngrx/effects';
-
 import { hot, cold } from 'jasmine-marbles';
 import { Observable } from 'rxjs/Observable';
 import { empty } from 'rxjs/observable/empty';
 import { of } from 'rxjs/observable/of';
-
 import { HeroService } from '../../store/services/hero.service';
 import { HeroEffects } from '../effects';
 import * as HeroActions from '../actions/hero.actions';
@@ -33,16 +30,18 @@ describe('HeroEffects', () => {
 
   const mockHeroes = [
     {
-      _name: 'Anthony Stark',
-      _height: 6,
-      _nickname: 'Iron Man',
-      _picture: 'http://',
+      id: 0,
+      name: 'Anthony Stark',
+      height: 6,
+      nickname: 'Iron Man',
+      picture: 'http://',
     },
     {
-      _name: 'Bruce Wayne',
-      _height: 4,
-      _nickname: 'Batman',
-      _picture: 'http://',
+      id: 1,
+      name: 'Bruce Wayne',
+      height: 4,
+      nickname: 'Batman',
+      picture: 'http://',
     },
   ];
 

@@ -13,16 +13,18 @@ describe('Hero Actions can be created correctly', () => {
     it('should create a new Load Hero Success action', () => {
       const Mockheroes = [
         {
-          _name: "Anthony Stark",
-          _height: 6.1,
-          _picture: "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg",
-          _nickname: "Iron Man"
+          id: 1,
+          name: "Anthony Stark",
+          height: 6.1,
+          picture: "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg",
+          nickname: "Iron Man"
         },
         {
-          _name: "Peter Parker",
-          _height: 5.1,
-          _picture: "http://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
-          _nickname: "Spider-Man"
+          id: 2,
+          name: "Peter Parker",
+          height: 5.1,
+          picture: "http://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
+          nickname: "Spider-Man"
         },
         ];
 
@@ -35,10 +37,11 @@ describe('Hero Actions can be created correctly', () => {
     it('should create a new Update Hero action', () => {
       const HeroToUpdate = 
         {
-          _name: "Anthony Stark",
-          _height: 6.1,
-          _picture: "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg",
-          _nickname: "Iron Man"
+          id: 1,
+          name: "Anthony Stark",
+          height: 6.1,
+          picture: "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg",
+          nickname: "Iron Man"
         };
 
       const action = new HeroActions.UpdateHero(HeroToUpdate);

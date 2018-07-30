@@ -65,7 +65,7 @@ describe('EditHeroComponent', () => {
     spyOn(store, 'dispatch').and.callThrough();
     const heroState: HeroReducer.HeroState = { data: heroes };
     spyOn(store, 'select').and.returnValue(Observable.of(heroState.data));
-    spyOn(component, 'interceptNickname').and.returnValue('Batman');
+    spyOn(component, 'interceptId').and.returnValue(1);
   });
 
   it('goBack() function should redirect to the initial page', fakeAsync(() => {

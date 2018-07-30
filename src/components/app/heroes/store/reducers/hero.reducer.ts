@@ -9,7 +9,7 @@ export const initialState: HeroState = {
   data: [],
 };
 
-let heroes: any[] = [];
+let heroes: Hero[] = [];
 export function reducer(state = initialState, action: HeroActions.Actions): HeroState {
   let data;
 
