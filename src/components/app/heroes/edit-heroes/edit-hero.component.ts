@@ -6,6 +6,7 @@ import * as HeroActions from '../store/actions/hero.actions';
 import { Hero } from '../models/hero.model';
 import { Store } from '../../../../../node_modules/@ngrx/store';
 import { Router } from "@angular/router";
+import { timeout } from 'rxjs/operators';
 
 
 @Component({
@@ -16,6 +17,8 @@ import { Router } from "@angular/router";
 
 export class EditHeroComponent implements OnInit {
     hero: Hero;
+    successNotification: Boolean;
+    warning: Boolean;
     constructor(private location: Location, private route: ActivatedRoute, private store: Store<heroStore.HeroState>, private router: Router) { }
 
     ngOnInit() {
@@ -33,6 +36,15 @@ export class EditHeroComponent implements OnInit {
     }
 
     updateHero() {
-        this.store.dispatch(new HeroActions.UpdateHero(this.hero));
+        if(this.hero.name && this.hero.nickname && this.hero.picture && this.hero.height){
+            this.store.dispatch(new HeroActions.UpdateHero(this.hero));
+            this.successNotification = true;
+            this.warning=false;
+            setTimeout(() =>{ this.successNotification = false;}, 3500);
+        }else{
+            this.successNotification = false;
+            this.warning=true;
+            setTimeout(() =>{ this.warning = false;}, 3500);
+        }
     }
 }

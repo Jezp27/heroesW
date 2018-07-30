@@ -1,5 +1,11 @@
+<div class="success" *ngIf="successNotification">
+    <label for="success"> Héroe Actualizado Correctamente </label>
+</div>
+<div class="warning" *ngIf="warning">
+    <label for="warning"> <i class="fa fa-warning" style="font-size:24px;"></i> Por favor revise la información ingresada </label>
+</div>
 <div class="flex-container">
-    <button class="return" (click)="goBack()"><i class="fa fa-home"></i> Regresar</button>
+    <button class="return" (click)="goBack()"><i class="fa fa-home" style="font-size:36px;"></i> Regresar</button>
     <div class="content">    
         <form class="form">
             <h2>{{hero._nickname}}</h2>

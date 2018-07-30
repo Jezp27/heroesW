@@ -68,3 +68,16 @@ $prefixes: "webkit", "moz", "ms", "o", "none";
     padding: 5px;
   }
 }
+
+%notifications{
+  display: flex;
+  justify-content: center;
+  border-radius: 1em;
+  margin-top: 1%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 1%;
+  color: white;
+  text-align: center;
+  position: relative;
+}
