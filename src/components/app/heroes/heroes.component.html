@@ -1,7 +1,7 @@
 <div class="search">
   <label>Buscar Heroe:  </label>
   <br>
-  <input #search type="text" [ngbTypeahead]="search"  name="search" />
+  <input #search type="text" name="search" />
 </div>
 <div class="flex-container">
   <div class="container-item" *ngFor="let hero of heroes; let i=index" [ngSwitch]='i'>

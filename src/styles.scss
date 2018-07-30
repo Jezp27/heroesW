@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Raleway:400,700');
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
 @import url('https://fonts.googleapis.com/css?family=Carter+One');
 
 
 $background: url(../../assets/img/HeroesBackground.jpg); 
 
 //fonts
-$font: 'Nanum Gothic', sans-serif;  
-$font-title: 'Black Han Sans', sans-serif;
-$font-size: 14px;
+$font: 'Nanum Gothic', sans-serif;
 $font-edit: 'Carter One', sans-serif;
+$font-size: 14px;
 
 //colors
 $red_color: rgba(239, 28, 28, 0.719);
@@ -54,4 +52,19 @@ $prefixes: "webkit", "moz", "ms", "o", "none";
   padding-top: 20px;
   padding-bottom: 30px;
   justify-content: space-around;
+}
+
+%headFooter{
+  display: flex;
+  justify-content: center;
+  border-radius: 1em;
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-right: 4%;
+  padding: 1%;
+  background-color: rgba(45,64,89, 0.8);
+  color: white;
+  label{
+    padding: 5px;
+  }
 }

@@ -2,12 +2,15 @@
 
 body, html {
   margin: 0;
-  font-family: $font-title;
+  font-family: $font-edit;
   background-image: $background;
   background-size: cover;
   background-attachment: fixed;
 }
 
+.footer{
+  @extend %headFooter;
+}
 
 
 
